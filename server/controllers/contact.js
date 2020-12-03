@@ -25,8 +25,8 @@ function postContact(req, res) {
     .catch((err) => console.error(err));
 }
 
-function getByIdbyContact(req, res) {
-  Contact.where("id", req.params.id)
+function getContactByProjectId(req, res) {
+  Contact.where("id", req.params.projects_id)
     .fetch({ withRelated: ["projects"] })
     .then((contact) => {
       res.status(200).json(contact);
@@ -68,7 +68,7 @@ function delContact(req, res) {
 module.exports = {
   getContact,
   postContact,
-  getByIdbyContact,
+  getContactByProjectId,
   updateContact,
   delContact,
 };

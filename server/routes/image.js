@@ -9,7 +9,7 @@ router.route("/").get(imageController.getImage);
 router.route("/upload").post(imageController.postImage);
 
 // get contact by id
-router.route("/:id").get(imageController.getByIdbyImage);
+router.route("/:id").get(imageController.getImageById);
 
 // delete contact by id
 router.route("/:id").delete(imageController.delImage);

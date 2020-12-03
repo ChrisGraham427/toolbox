@@ -9,7 +9,7 @@ router.route("/").get(contactController.getContact);
 router.route("/contact").post(contactController.postContact);
 
 // get contact by id
-router.route("/:id").get(contactController.getByIdbyContact);
+router.route("/:id").get(contactController.getContactByProjectId);
 
 // update contact
 router.route("/:id").put(contactController.updateContact);

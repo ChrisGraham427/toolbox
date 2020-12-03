@@ -23,7 +23,7 @@ function postImage(req, res) {
     .catch((err) => console.error(err));
 }
 
-function getByIdbyImage(req, res) {
+function getImageById(req, res) {
   Image.where("id", req.params.id)
     .fetch({ withRelated: ["projects"] })
     .then((image) => {
@@ -42,6 +42,6 @@ function delImage(req, res) {
 module.exports = {
   getImage,
   postImage,
-  getByIdbyImage,
+  getImageById,
   delImage,
 };
