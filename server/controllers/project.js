@@ -1,6 +1,6 @@
 const Project = require("../models/project");
 
-function get(req, res) {
+function getProject(req, res) {
   Project.where(req.query)
     .fetchAll({ withRelated: ["contacts"] })
     .then((projects) => {
@@ -8,7 +8,7 @@ function get(req, res) {
     });
 }
 
-function post(req, res) {
+function postProject(req, res) {
   new Project({
     title: req.body.title,
     description: req.body.description,
@@ -30,7 +30,7 @@ function post(req, res) {
     .catch((err) => console.error(err));
 }
 
-function getById(req, res) {
+function getByIdbyProject(req, res) {
   Project.where("id", req.params.id)
     .fetch({ withRelated: ["contacts"] })
     .then((project) => {
@@ -38,7 +38,7 @@ function getById(req, res) {
     });
 }
 
-function update(req, res) {
+function updateProject(req, res) {
   Project.where("id", req.params.id)
     .fetch()
     .then((project) => {
@@ -75,7 +75,7 @@ function update(req, res) {
     });
 }
 
-function del(req, res) {
+function delProject(req, res) {
   Project.where("id", req.params.id)
     .destroy()
     .then((deletedProject) => {
@@ -84,9 +84,9 @@ function del(req, res) {
 }
 
 module.exports = {
-  get,
-  post,
-  getById,
-  update,
-  del,
+  getProject,
+  postProject,
+  getByIdbyProject,
+  updateProject,
+  delProject,
 };
