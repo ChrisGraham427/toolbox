@@ -9,7 +9,7 @@ router.route("/").get(projectController.getProject);
 router.route("/project").post(projectController.postProject);
 
 // get project by id
-router.route("/:id").get(projectController.getByIdbyProject);
+router.route("/:id").get(projectController.getProjectById);
 
 // update project
 router.route("/:id").put(projectController.updateProject);

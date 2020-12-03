@@ -30,7 +30,7 @@ function postProject(req, res) {
     .catch((err) => console.error(err));
 }
 
-function getByIdbyProject(req, res) {
+function getProjectById(req, res) {
   Project.where("id", req.params.id)
     .fetch({ withRelated: ["contacts"] })
     .then((project) => {
@@ -86,7 +86,7 @@ function delProject(req, res) {
 module.exports = {
   getProject,
   postProject,
-  getByIdbyProject,
+  getProjectById,
   updateProject,
   delProject,
 };
