@@ -4,7 +4,13 @@ exports.up = function (knex) {
     table.string("source").notNullable();
     table.string("description").notNullable();
     table.string("alt").notNullable();
-    table.integer("projects_id").unsigned().notNullable();
+    table
+      .integer("projects_id")
+      .unsigned()
+      .references("id")
+      .inTable("projects")
+      .onUpdate("CASCADE")
+      .onDelete("CASCADE");
     table.timestamp("updated_at").defaultTo(knex.fn.now());
   });
 };
