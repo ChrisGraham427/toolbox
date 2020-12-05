@@ -1,11 +1,11 @@
 const Contact = require("../models/contact");
 
 function getContact(req, res) {
-  Contact.where(req.query)
-    .fetchAll({ withRelated: ["project"] })
-    .then((contacts) => {
-      res.status(200).json(contacts);
-    });
+  console.log("getContact");
+  Contact.fetchAll({ withRelated: ["project"] }).then((contacts) => {
+    console.log(contacts);
+    res.status(200).json(contacts);
+  });
 }
 
 function postContact(req, res) {

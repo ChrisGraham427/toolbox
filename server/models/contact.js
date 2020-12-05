@@ -2,8 +2,8 @@ const bookshelf = require("../bookshelf");
 
 const Contact = bookshelf.model("Contact", {
   tableName: "contacts",
-  inventories: function () {
-    return this.hasMany("Project");
+  project: function () {
+    return this.belongsTo("Project");
   },
 });
 

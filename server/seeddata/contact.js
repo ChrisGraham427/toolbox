@@ -5,7 +5,7 @@ module.exports = [
     position: "Position One",
     email: "one@email.com",
     phone: "123-456-7890",
-    projects_id: 1,
+    project_id: 1,
   },
   {
     name: "Person Two",
@@ -13,7 +13,7 @@ module.exports = [
     position: "Position Two",
     email: "two@email.com",
     phone: "123-456-7892",
-    projects_id: 1,
+    project_id: 1,
   },
   {
     name: "Person Three",
@@ -21,6 +21,6 @@ module.exports = [
     position: "Position Three",
     email: "three@email.com",
     phone: "123-456-7893",
-    projects_id: 1,
+    project_id: 1,
   },
 ];

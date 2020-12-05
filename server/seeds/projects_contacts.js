@@ -30,7 +30,7 @@ exports.seed = function (knex) {
     })
     .then((newData) => {
       const images = imageData.map((newImage) => {
-        newImage["projects_id"] =
+        newImage["project_id"] =
           newData[Math.floor(Math.random() * newData.length)];
         return newImage;
       });

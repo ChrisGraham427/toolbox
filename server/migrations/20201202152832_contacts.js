@@ -5,7 +5,7 @@ exports.up = function (knex) {
     table.string("company").notNullable();
     table.string("position").notNullable();
     table.string("email").notNullable();
-    table.integer("projects_id").unsigned().notNullable();
+    table.integer("project_id").unsigned().notNullable();
     table.string("phone").notNullable();
     table.timestamp("updated_at").defaultTo(knex.fn.now());
   });

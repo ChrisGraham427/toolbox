@@ -4,7 +4,9 @@ const router = express.Router();
 
 // get all contacts
 router.route("/").get(contactController.getContact);
-
+// router.route("/").get((req, res) => {
+//   res.json({ message: "hello" });
+// });
 // post a new contact
 router.route("/contact").post(contactController.postContact);
 

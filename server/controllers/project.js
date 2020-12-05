@@ -2,9 +2,9 @@ const Project = require("../models/project");
 
 function getProject(req, res) {
   Project.where(req.query)
-    .fetchAll({ withRelated: ["contacts"] })
+    .fetchAll({ withRelated: ["contact"] })
     .then((projects) => {
-      res.status(200).json(projects);
+      res.status(200).json({ projects });
     });
 }
 
@@ -32,9 +32,9 @@ function postProject(req, res) {
 
 function getProjectById(req, res) {
   Project.where("id", req.params.id)
-    .fetch({ withRelated: ["contacts"] })
+    .fetch({ withRelated: ["contact"] })
     .then((project) => {
-      res.status(200).json(project);
+      res.status(200).json({ project });
     });
 }
 
