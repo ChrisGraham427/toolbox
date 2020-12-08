@@ -1,4 +1,8 @@
 .image__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   background-color: $backgroundgrey;
   border-radius: 0.5rem;
   width: 50%;
@@ -11,5 +15,22 @@
     color: $mainwhite;
     font-size: 1rem;
     text-align: center;
+  }
+  &-delete-image {
+    height: 20px;
+  }
+  &-delete {
+    color: $mainblack;
+    background-color: $mainyellow;
+    font-size: 0.75rem;
+    font-weight: bolder;
+    width: 160px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid $mainyellow;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
   }
 }

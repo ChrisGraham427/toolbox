@@ -13,6 +13,14 @@ export default function ImageList(props) {
             return <Image key={image.id} data={image} />;
           })}
       </ul>
+      <div className="image__container-delete">
+        <span className="image__container-delete-span" />
+        <img
+          src={process.env.PUBLIC_URL + "/delete.svg"}
+          className="image__container-delete-image"
+        />
+        <p>DELETE ALL IMAGES</p>
+      </div>
     </section>
   );
 }

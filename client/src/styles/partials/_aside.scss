@@ -4,9 +4,9 @@
   justify-content: space-evenly;
   height: 82.5vh;
   width: 140px;
-  background-color: $maingrey;
+  // background-color: $maingrey;
   color: $mainyellow;
-  border-right: 2px solid $mainyellow;
+  // border-right: 2px solid $mainyellow;
 
   &__logo {
     height: 2rem;
@@ -29,5 +29,8 @@
     border-radius: 4px;
     background-color: $mainyellow;
     box-shadow: 0 2px $backgroundgrey;
+  }
+  &__logo-icon:hover {
+    transform: scaleX(1.125) scaleY(1.125);
   }
 }
