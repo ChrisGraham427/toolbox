@@ -5,12 +5,14 @@ import ContactMain from "./components/ContactMain";
 import ImageMain from "./components/ImageMain";
 import Hero from "./components/Hero";
 import LoginPage from "./components/LoginPage";
+import MainSchedule from "./components/MainSchedule";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
 } from "react-router-dom";
+import Scheduler from "./components/Scheduler";
 const API_URL = "http://localhost:8080";
 
 class App extends Component {
@@ -86,6 +88,7 @@ class App extends Component {
           />
           <Route path="/" component={Hero} exact />
           <Route path="/login" component={LoginPage} exact />
+          <Route path="/schedule" component={MainSchedule} exact />
         </Switch>
       </div>
     );

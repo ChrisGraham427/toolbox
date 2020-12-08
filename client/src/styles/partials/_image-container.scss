@@ -1,0 +1,15 @@
+.image__container {
+  background-color: $backgroundgrey;
+  border-radius: 0.5rem;
+  width: 50%;
+  &-list {
+    height: 100px;
+    overflow: scroll;
+  }
+  &-title {
+    padding-top: 1.125rem;
+    color: $mainwhite;
+    font-size: 1rem;
+    text-align: center;
+  }
+}

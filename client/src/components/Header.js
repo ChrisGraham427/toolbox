@@ -14,6 +14,9 @@ function Header() {
         <Link to="/project">
           <button className="navbar__button">DASHBOARD</button>
         </Link>
+        <Link to="/schedule">
+          <button className="navbar__button">CALENDAR</button>
+        </Link>
         <Link to="/login">
           <button className="navbar__button">LOGIN</button>
         </Link>

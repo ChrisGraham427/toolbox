@@ -47,7 +47,7 @@ body {
 }
 
 .navbar {
-  height: 8vh;
+  height: 10vh;
   background-color: #4c4c4c;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -108,7 +108,7 @@ body {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   height: 82.5vh;
-  width: 8vw;
+  width: 140px;
   background-color: #b7b8b26e;
   color: #ece936;
   border-right: 2px solid #ece936;
@@ -355,6 +355,25 @@ body {
           align-items: center;
 }
 
+.project__main-left-column {
+  width: 15vw;
+}
+
+.project__main-right-column {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 4rem;
+}
+
 .contact__main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -379,6 +398,25 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.contact__main-left-column {
+  width: 15vw;
+}
+
+.contact__main-right-column {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 4rem;
 }
 
 .addcontact {
@@ -564,6 +602,7 @@ body {
   -webkit-box-shadow: 0 2px 4px #ece936;
           box-shadow: 0 2px 4px #ece936;
   width: 400px;
+  margin-right: 4rem;
 }
 
 .addimage__title {
@@ -651,7 +690,12 @@ body {
           align-items: center;
 }
 
+.image__main-left-column {
+  width: 15vw;
+}
+
 .image__main-right-column {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -659,12 +703,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 4rem;
 }
 
 .image__card {
@@ -711,11 +753,6 @@ body {
 .image__card-image {
   height: 110px;
   width: 180px;
-}
-
-.image__container-list {
-  height: 100px;
-  overflow: scroll;
 }
 
 .hero__video {
@@ -850,6 +887,24 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.image__container {
+  background-color: #4c4c4c;
+  border-radius: 0.5rem;
+  width: 50%;
+}
+
+.image__container-list {
+  height: 100px;
+  overflow: scroll;
+}
+
+.image__container-title {
+  padding-top: 1.125rem;
+  color: #fafafa;
+  font-size: 1rem;
+  text-align: center;
 }
 
 .mainbody {

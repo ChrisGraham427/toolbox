@@ -1,16 +1,38 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Aside from "../components/Aside";
+import Calendar from "tui-calendar"; /* ES6 */
+import "tui-calendar/dist/tui-calendar.css";
 
+// If you use the default popups, use this.
+import "tui-date-picker/dist/tui-date-picker.css";
+import "tui-time-picker/dist/tui-time-picker.css";
 export default function Scheduler() {
-  return (
-    <section className="scheduler__main">
-      <Header />
-      <section className="scheduler__main-column">
-        <Aside className="scheduler__main-left-column" />
-        <div className="scheduler__main-right-column"></div>
-      </section>
-      <Footer />
-    </section>
-  );
+  var calendar = new Calendar("#calendar", {
+    defaultView: "month",
+    taskView: true,
+    template: {
+      monthDayname: function (dayname) {
+        console.log(dayname);
+        return (
+          <div id="calendar" style="height:500px;">
+            <span class="calendar-week-dayname-name">
+              ' + dayname.label + "
+            </span>
+          </div>
+        );
+      },
+    },
+  });
 }
+// return (
+//     <section className="scheduler__main">
+//       <Header />
+//       <section className="scheduler__main-column">
+//         <Aside className="scheduler__main-left-column" />
+//         <div className="scheduler__main-right-column">
+//           <div id="calendar" style="height:800px;">
+//             <Calendar />
+//           </div>
+//         </div>
+//       </section>
+//       <Footer />
+//     </section>
+//   );
