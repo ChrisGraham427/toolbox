@@ -1,8 +1,8 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Aside from "../components/Aside";
-import ProjectList from "../components/ProjectList";
-import AddProject from "../components/AddProject";
+import Header from "./Header";
+import Footer from "./Footer";
+import Aside from "./Aside";
+import ProjectList from "./ProjectList";
+import AddProject from "./AddProject";
 
 export default function ProjectMain(props) {
   console.log(props);
@@ -13,7 +13,7 @@ export default function ProjectMain(props) {
         <Aside className="project__main-left-column" />
         <div className="project__main-right-column">
           <AddProject />
-          <ProjectList />
+          <ProjectList data={props.data} />
         </div>
       </section>
       <Footer />

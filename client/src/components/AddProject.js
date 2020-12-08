@@ -59,13 +59,13 @@ export default function AddProject() {
           placeholder="Enter Postal Code"
           className="addproject__form-input"
         />
-        <label className="addproject__form-label">START DATE</label>
+        <label className="addproject__form-label">Start Date</label>
         <input
           type="date"
           name="startDate"
           className="addproject__form-input"
         />
-        <label className="addproject__form-label">END DATE</label>
+        <label className="addproject__form-label">End Date</label>
         <input type="date" name="endDate" className="addproject__form-input" />
       </form>
       <div className="addproject__form-button-div">

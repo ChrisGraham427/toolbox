@@ -8,7 +8,7 @@ router.route("/").get(contactController.getContact);
 //   res.json({ message: "hello" });
 // });
 // post a new contact
-router.route("/new").post(contactController.postContact);
+router.route("/post").post(contactController.postContact);
 
 // get contact by id
 router.route("/:id").get(contactController.getContactByProjectId);

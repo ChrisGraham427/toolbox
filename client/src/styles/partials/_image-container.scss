@@ -5,9 +5,13 @@
   align-items: center;
   background-color: $backgroundgrey;
   border-radius: 0.5rem;
-  width: 50%;
+  width: 60%;
+  height: 30rem;
   &-list {
-    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 560px;
+    height: 280px;
     overflow: scroll;
   }
   &-title {

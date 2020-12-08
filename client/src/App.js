@@ -55,7 +55,21 @@ class App extends Component {
         console.log(err);
       });
   }
+  // POST Functions-----------------------------
+  // handleChangeContacts = (event) => {
+  //   this.setState({ contact: event.target.value });
+  // };
+  // handleSubmitContact = (event) => {
+  //   event.preventDefault();
+  //   const newContact = {
+  //     contact: this.state.contact,
+  //   };
 
+  //   axios.post(`${API_URL}/contact/post}`, { contact }).then((res) => {
+  //     console.log(res.data);
+  //   });
+  // };
+  //------------------------------------------------
   getImages() {
     axios
       .get(`${API_URL}/upload`)
@@ -73,17 +87,19 @@ class App extends Component {
     return (
       <div>
         <Switch>
-          <Route path="/project" component={ProjectMain} exact />
+          <Route
+            path="/project"
+            render={() => <ProjectMain data={this.state.project} />}
+            exact
+          />
           <Route
             path="/contact"
-            component={ContactMain}
-            data={this.state.contact}
+            render={() => <ContactMain data={this.state.contact} />}
             exact
           />
           <Route
             path="/images"
-            component={ImageMain}
-            data={this.state.image}
+            render={() => <ImageMain data={this.state.image} />}
             exact
           />
           <Route path="/" component={Hero} exact />

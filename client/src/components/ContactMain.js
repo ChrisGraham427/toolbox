@@ -1,8 +1,8 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Aside from "../components/Aside";
-import ContactList from "../components/ContactList";
-import AddContact from "../components/AddContact";
+import Header from "./Header";
+import Footer from "./Footer";
+import Aside from "./Aside";
+import ContactList from "./ContactList";
+import AddContact from "./AddContact";
 
 export default function ContactMain(props) {
   console.log(props);

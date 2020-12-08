@@ -1,21 +1,19 @@
 import Calendar from "tui-calendar"; /* ES6 */
 import "tui-calendar/dist/tui-calendar.css";
 
-// If you use the default popups, use this.
-import "tui-date-picker/dist/tui-date-picker.css";
-import "tui-time-picker/dist/tui-time-picker.css";
+// // If you use the default popups, use this.
+// import "tui-date-picker/dist/tui-date-picker.css";
+// import "tui-time-picker/dist/tui-time-picker.css";
 export default function Scheduler() {
   var calendar = new Calendar("#calendar", {
-    defaultView: "month",
+    defaultView: "day",
     taskView: true,
     template: {
       monthDayname: function (dayname) {
-        console.log(dayname);
+        console.log(dayname.label);
         return (
-          <div id="calendar" style="height:500px;">
-            <span class="calendar-week-dayname-name">
-              ' + dayname.label + "
-            </span>
+          <div id="calendar" style="height:50px;">
+            <span class="calendar-week-dayname-name">{dayname.label}</span>
           </div>
         );
       },

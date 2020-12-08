@@ -17,6 +17,9 @@ function Footer() {
           className="bottomnav__logo"
         />
       </div>
+      <p className="bottomnav__produced">
+        Produced by FlyinRoosterDesigns 2020
+      </p>
       <Link to="/">
         <img
           src={process.env.PUBLIC_URL + "/scoped-logo.png"}
