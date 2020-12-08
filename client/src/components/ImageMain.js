@@ -12,7 +12,7 @@ export default function ImageMain(props) {
         <Aside className="image__main-left-column" />
         <div className="image__main-right-column">
           <AddImage />
-          <ImageList data={props.data} />
+          <ImageList data={props.data} submitDelete={props.submitDelete} />
         </div>
       </section>
       <Footer />

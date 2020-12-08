@@ -1,30 +1,31 @@
 const Project = require("../models/project");
 
 function getProject(req, res) {
-  Project.fetchAll({ withRelated: ["contact"] }).then((projects) => {
-    console.log(projects);
-    res.status(200).json(projects);
+  Project.fetchAll({ withRelated: ["contact"] }).then((project) => {
+    console.log(project);
+    res.status(200).json(project);
   });
 }
 
 function postProject(req, res) {
+  console.log(req.body);
   new Project({
-    title: req.body.title,
-    description: req.body.description,
-    streetNumber: req.body.streetNumber,
-    streetName: req.body.streetName,
-    city: req.body.city,
-    province: req.body.province,
-    postalCode: req.body.postalCode,
-    contact: req.body.contact,
-    images: req.body.images,
-    startDate: req.body.startDate,
-    endDate: req.body.endDate,
-    categories: JSON.stringify(req.body.categories),
+    title: req.body.project.title,
+    description: req.body.project.description,
+    streetNumber: req.body.project.streetNumber,
+    streetName: req.body.project.streetName,
+    city: req.body.project.city,
+    province: req.body.project.province,
+    postalCode: req.body.project.postalCode,
+    contact: req.body.project.contact,
+    images: req.body.project.images,
+    contact: req.body.project.contact,
+    startDate: req.body.project.startDate,
+    endDate: req.body.project.endDate,
   })
     .save()
     .then((newProject) => {
-      res.status(201).json({ newProject });
+      res.status(201).json(newProject);
     })
     .catch((err) => console.error(err));
 }

@@ -1,5 +1,5 @@
 export default function Contact(props) {
-  const { name, company, position, email, phone, project_id } = props.data;
+  const { name, company, position, email, phone, project_id, id } = props.data;
   return (
     <li className="contact__card" key={project_id}>
       <section className="contact__card-main">
@@ -10,7 +10,15 @@ export default function Contact(props) {
           <p className="contact__card">{email}</p>
           <p className="contact__card">{phone}</p>
         </div>
-        <button className="contact__card-button">EDIT</button>
+        <form
+          onSubmit={(event) => {
+            props.submitDelete(event, id);
+          }}
+        >
+          <button type="submit" className="project__card-button">
+            DELETE
+          </button>
+        </form>
       </section>
     </li>
   );

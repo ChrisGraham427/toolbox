@@ -8,6 +8,8 @@ export default function Project(props) {
     city,
     province,
     postalCode,
+    contact,
+    images,
     startDate,
     endDate,
   } = props.data;
@@ -29,7 +31,13 @@ export default function Project(props) {
         <p className="project__card-item">Start Date: {startDate}</p>
         <p className="project__card-item">Est. End Date: {endDate}</p>
       </div>
-      <button className="project__card-button">EDIT</button>
+      <form>
+        <button className="project__card-button">EDIT</button>
+      </form>
+      <span>
+        {contact}
+        {images}
+      </span>
     </li>
   );
 }

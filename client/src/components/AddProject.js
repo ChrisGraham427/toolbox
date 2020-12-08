@@ -1,15 +1,10 @@
 const API_URL = "http://localhost:8080";
 
-export default function AddProject() {
+export default function AddProject(props) {
   return (
     <section className="addproject">
       <h1 className="addproject__title">MANAGE PROJECTS</h1>
-      <form
-        encType="multipart/form-data"
-        method="POST"
-        action={`${API_URL}/project`}
-        className="addproject__form"
-      >
+      <form className="addproject__form" onSubmit={props.handleSubmit}>
         <label className="addproject__form-label">Title</label>
         <input
           type="text"
@@ -67,15 +62,12 @@ export default function AddProject() {
         />
         <label className="addproject__form-label">End Date</label>
         <input type="date" name="endDate" className="addproject__form-input" />
+        <div className="addproject__form-button-div">
+          <button className="addproject__form-button" type="submit">
+            ADD PROJECT
+          </button>
+        </div>
       </form>
-      <div className="addproject__form-button-div">
-        <button className="addproject__form-button" type="submit">
-          ADD PROJECT
-        </button>
-        <button className="addproject__form-button" type="edit">
-          EDIT PROJECT
-        </button>
-      </div>
     </section>
   );
 }

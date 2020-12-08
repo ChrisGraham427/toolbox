@@ -7,18 +7,18 @@ function getContact(req, res) {
 }
 
 function postContact(req, res) {
+  console.log("request", req.body);
   new Contact({
-    name: req.body.name,
-    company: req.body.company,
-    position: req.body.position,
-    email: req.body.email,
-    phone: req.body.phone,
-    projects_id: req.body.projects_id,
-    categories: JSON.stringify(req.body.categories),
+    name: req.body.contact.name,
+    company: req.body.contact.company,
+    position: req.body.contact.position,
+    email: req.body.contact.email,
+    phone: req.body.contact.phone,
+    project_id: req.body.contact.project_id,
   })
     .save()
     .then((newContact) => {
-      res.status(201).json({ newContact });
+      res.status(201).json(newContact);
     })
     .catch((err) => console.error(err));
 }
@@ -56,7 +56,7 @@ function updateContact(req, res) {
 }
 
 function delContact(req, res) {
-  Project.where("id", req.params.id)
+  Contact.where("id", req.params.id)
     .destroy()
     .then((deletedContact) => {
       res.status(200).json({ deletedContact });

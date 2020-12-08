@@ -1,15 +1,10 @@
 const API_URL = "http://localhost:8080";
 
-export default function AddContact() {
+export default function AddContact(props) {
   return (
     <section className="addcontact">
       <h1 className="addcontact__title">MANAGE CONTACTS</h1>
-      <form
-        encType="multipart/form-data"
-        method="POST"
-        action={`${API_URL}/contact`}
-        className="addcontact__form"
-      >
+      <form onSubmit={props.handleSubmit} className="addcontact__form">
         <label className="addcontact__form-label">Name</label>
         <input
           type="text"
@@ -45,15 +40,18 @@ export default function AddContact() {
           placeholder="(123) 123-4567"
           className="addcontact__form-input"
         />
-      </form>
-      <div className="addcontact__form-button-div">
+        <label className="addcontact__form-label">Project ID</label>
+        <input
+          type="int"
+          name="project_id"
+          placeholder="1"
+          className="addcontact__form-input"
+        />
         <button className="addcontact__form-button" type="submit">
           ADD CONTACT
         </button>
-        <button className="addcontact__form-button" type="edit">
-          EDIT CONTACT
-        </button>
-      </div>
+      </form>
+      <div className="addcontact__form-button-div"></div>
     </section>
   );
 }

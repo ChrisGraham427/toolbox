@@ -12,7 +12,7 @@ export default function ProjectMain(props) {
       <section className="project__main-column">
         <Aside className="project__main-left-column" />
         <div className="project__main-right-column">
-          <AddProject />
+          <AddProject handleSubmit={props.handleSubmit} />
           <ProjectList data={props.data} />
         </div>
       </section>

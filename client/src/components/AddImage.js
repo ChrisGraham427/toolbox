@@ -4,12 +4,7 @@ export default function AddImage() {
   return (
     <section className="addimage">
       <h1 className="addimage__title">UPLOAD IMAGE</h1>
-      <form
-        encType="multipart/form-data"
-        method="POST"
-        action={`${API_URL}/upload`}
-        className="addimage__form"
-      >
+      <form encType="multipart/form-data" className="addimage__form">
         <label className="addimage__form-label">Description</label>
         <input
           type="text"

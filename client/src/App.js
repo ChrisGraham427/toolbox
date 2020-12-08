@@ -41,7 +41,34 @@ class App extends Component {
         console.log(err);
       });
   }
+  //----------------------POST PROJECT
+  handleChangeProject = (event) => {
+    this.setState({ project: event.target.value });
+  };
+  handleSubmitProject = (event) => {
+    event.preventDefault();
+    const project = {
+      title: event.target.title.value,
+      description: event.target.description.value,
+      streetNumber: event.target.streetNumber.value,
+      streetName: event.target.streetName.value,
+      city: event.target.city.value,
+      province: event.target.province.value,
+      postalCode: event.target.postalCode.value,
+      contact: "Fred",
+      images: "1",
+      startDate: event.target.startDate.value,
+      endDate: event.target.endDate.value,
+    };
 
+    axios.post(`${API_URL}/project`, { project }).then((res) => {
+      console.log(res.data);
+      console.log(this.state.projects);
+      this.setState({ project: [...this.state.project, res.data] });
+    });
+  };
+
+  //======----===---===-=---
   getContacts() {
     axios
       .get(`${API_URL}/contact`)
@@ -56,23 +83,45 @@ class App extends Component {
       });
   }
   // POST Functions-----------------------------
-  // handleChangeContacts = (event) => {
-  //   this.setState({ contact: event.target.value });
-  // };
-  // handleSubmitContact = (event) => {
-  //   event.preventDefault();
-  //   const newContact = {
-  //     contact: this.state.contact,
-  //   };
+  handleChangeContacts = (event) => {
+    this.setState({ contact: event.target.value });
+  };
+  handleSubmitContact = (event) => {
+    event.preventDefault();
+    console.log(event.target.name.value);
+    console.log(event.target.company.value);
+    console.log(event.target.position.value);
+    console.log(event.target.email.value);
 
-  //   axios.post(`${API_URL}/contact/post}`, { contact }).then((res) => {
-  //     console.log(res.data);
-  //   });
-  // };
+    const contact = {
+      name: event.target.name.value,
+      company: event.target.company.value,
+      position: event.target.position.value,
+      email: event.target.email.value,
+      phone: event.target.phone.value,
+      project_id: event.target.project_id.value,
+    };
+
+    axios.post(`${API_URL}/contact`, { contact }).then((res) => {
+      this.setState({ contact: [...this.state.contact, res.data] });
+    });
+  };
   //------------------------------------------------
+  //=====DELETE=======
+  handleDeleteContacts = (event, id) => {
+    this.setState({ id: event.target.value });
+  };
+  handleDeleteSubmitContacts = (event, id) => {
+    console.log("DELETE");
+    event.preventDefault();
+
+    axios.delete(`${API_URL}/contact/${id}`).then((res) => {});
+  };
+
+  //=====================
   getImages() {
     axios
-      .get(`${API_URL}/upload`)
+      .get(`${API_URL}/image`)
       .then((res) => {
         this.setState({
           image: res.data,
@@ -83,23 +132,52 @@ class App extends Component {
       });
   }
 
+  //======DELETE IMAGE==========
+  handleDeleteImage = (event) => {
+    this.setState({ id: event.target.value });
+  };
+  handleDeleteSubmitImage = (event) => {
+    event.preventDefault();
+
+    axios.delete(`${API_URL}/image/${this.state.contact.id}`).then((res) => {
+      console.log(res.data);
+    });
+  };
+  //==============================
+
   render() {
     return (
       <div>
         <Switch>
           <Route
             path="/project"
-            render={() => <ProjectMain data={this.state.project} />}
+            render={() => (
+              <ProjectMain
+                handleSubmit={this.handleSubmitProject}
+                data={this.state.project}
+              />
+            )}
             exact
           />
           <Route
             path="/contact"
-            render={() => <ContactMain data={this.state.contact} />}
+            render={() => (
+              <ContactMain
+                submitDelete={this.handleDeleteSubmitContacts}
+                handleSubmit={this.handleSubmitContact}
+                data={this.state.contact}
+              />
+            )}
             exact
           />
           <Route
             path="/images"
-            render={() => <ImageMain data={this.state.image} />}
+            render={() => (
+              <ImageMain
+                submitDelete={this.handleDeleteSubmitImage}
+                data={this.state.image}
+              />
+            )}
             exact
           />
           <Route path="/" component={Hero} exact />
