@@ -6,7 +6,7 @@ const router = express.Router();
 router.route("/").get(imageController.getImage);
 
 // post a new contact
-router.route("/upload").post(imageController.postImage);
+router.route("/new").post(imageController.postImage);
 
 // get contact by id
 router.route("/:id").get(imageController.getImageById);

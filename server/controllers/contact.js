@@ -1,9 +1,7 @@
 const Contact = require("../models/contact");
 
 function getContact(req, res) {
-  console.log("getContact");
   Contact.fetchAll({ withRelated: ["project"] }).then((contacts) => {
-    console.log(contacts);
     res.status(200).json(contacts);
   });
 }

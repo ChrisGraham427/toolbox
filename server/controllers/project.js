@@ -1,11 +1,10 @@
 const Project = require("../models/project");
 
 function getProject(req, res) {
-  Project.where(req.query)
-    .fetchAll({ withRelated: ["contact"] })
-    .then((projects) => {
-      res.status(200).json({ projects });
-    });
+  Project.fetchAll({ withRelated: ["contact"] }).then((projects) => {
+    console.log(projects);
+    res.status(200).json(projects);
+  });
 }
 
 function postProject(req, res) {

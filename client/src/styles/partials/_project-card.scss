@@ -1,0 +1,68 @@
+.project__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0.5rem;
+  background-color: $backgroundgrey;
+  color: #fafafa;
+  width: 15rem;
+  box-shadow: 0 2px 4px $mainyellow;
+  margin-top: 1rem;
+  &-item {
+    margin: 0.5rem 0;
+  }
+  &-description {
+    width: 90%;
+    margin-left: 5%;
+  }
+  &-button {
+    height: 1.25rem;
+    width: 4rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: $mainyellow;
+    color: $mainblack;
+    margin-bottom: 0.5rem;
+    font-weight: bolder;
+  }
+  &-title {
+    font-size: 1.125rem;
+    padding-top: 1rem;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+  &-address-container {
+    text-align: center;
+    flex-wrap: wrap;
+    width: 80%;
+    color: $mainyellow;
+  }
+  &-item-address {
+    color: #fafafa;
+    margin: 0;
+    font-size: 0.75rem;
+  }
+  &-item-address-yellow {
+    color: $mainyellow;
+    margin: 0;
+  }
+  &-address-title {
+    color: #fafafa;
+    font-size: 1rem;
+    margin: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid $backgroundgrey;
+  }
+  &-timeline {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+    border: 1px solid $mainblack;
+    background-color: $maingrey;
+    border-radius: 4px;
+    padding: 3px;
+  }
+}

@@ -1,6 +1,6 @@
 module.exports = [
   {
-    title: "Project One",
+    title: "PROJECT ONE",
     description:
       "this is the first project to be listed. It is a test block of text used for development",
     streetNumber: "123",
@@ -14,7 +14,7 @@ module.exports = [
     endDate: "Dec. 18/21",
   },
   {
-    title: "Project Two",
+    title: "PROJECT TWO",
     description:
       "this is the second project to be listed. It is a test block of text used for development",
     streetNumber: "124",

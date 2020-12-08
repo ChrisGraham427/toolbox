@@ -1,0 +1,33 @@
+.aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 82.5vh;
+  width: 8vw;
+  background-color: $maingrey;
+  color: $mainyellow;
+  border-right: 2px solid $mainyellow;
+
+  &__logo {
+    height: 2rem;
+  }
+  &__logo-title {
+    color: $backgroundgrey;
+    font-size: 0.75rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  &__logo-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 72px;
+    height: 80px;
+    margin-left: 25%;
+    border-radius: 4px;
+    background-color: $mainyellow;
+    box-shadow: 0 2px $backgroundgrey;
+  }
+}

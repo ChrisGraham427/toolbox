@@ -34,7 +34,6 @@ exports.seed = function (knex) {
           newData[Math.floor(Math.random() * newData.length)];
         return newImage;
       });
-      console.log(images);
       return knex("images").insert(images);
     });
 };

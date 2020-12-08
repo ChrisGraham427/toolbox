@@ -1,11 +1,9 @@
 const Image = require("../models/image");
 
 function getImage(req, res) {
-  Image.where(req.query)
-    .fetchAll({ withRelated: ["project"] })
-    .then((images) => {
-      res.status(200).json(images);
-    });
+  Image.fetchAll().then((images) => {
+    res.status(200).json(images);
+  });
 }
 
 function postImage(req, res) {

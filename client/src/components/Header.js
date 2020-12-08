@@ -1,27 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-import { NavLink } from "react-router-dom";
 function Header() {
   return (
-    <nav className="navbar">
-      <span>LOGO</span>
-      <ul className="navbar__list">
-        <NavLink
-          className="navbar__list-item"
-          to="/project"
-          activeClassName="nav-link__active"
-        >
-          Projects
-        </NavLink>
-        <NavLink
-          className="navbar__list-item"
-          to="/contact"
-          activeClassName="nav-link__active"
-        >
-          Contacts
-        </NavLink>
-      </ul>
-    </nav>
+    <header className="navbar">
+      <Link to="/">
+        <img
+          src={process.env.PUBLIC_URL + "/scoped-logo.png"}
+          className="navbar__logo"
+        />
+      </Link>
+      <div className="navbar__links">
+        <Link to="/project">
+          <button className="navbar__button">DASHBOARD</button>
+        </Link>
+        <Link to="/login">
+          <button className="navbar__button">LOGIN</button>
+        </Link>
+      </div>
+    </header>
   );
 }
 

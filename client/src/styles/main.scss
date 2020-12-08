@@ -1,0 +1,25 @@
+@import "./partials/global";
+@import "./partials/variables";
+@import "./partials/fonts";
+@import "./partials/header";
+@import "./partials/aside";
+@import "./partials/contact-card";
+@import "./partials/bottomnav";
+@import "./partials/mainbody";
+@import "./partials/project-container";
+@import "./partials/project-card";
+@import "./partials/project-main";
+@import "./partials/contact-main";
+@import "./partials/addcontact";
+@import "./partials/addprojects";
+@import "./partials/addimage";
+@import "./partials/image-main";
+@import "./partials/image-card";
+@import "./partials/hero-video";
+@import "./partials/login-page";
+
+.mainbody {
+  background-color: $maingrey;
+  margin-top: -5px;
+  align-items: center;
+}

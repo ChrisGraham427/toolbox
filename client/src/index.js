@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import "./styles/main.css";
 import App from "./App";
 import {
   BrowserRouter as Router,
@@ -13,7 +13,7 @@ import reportWebVitals from "./reportWebVitals";
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Route path="/" exact component={App} />
+      <App />
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

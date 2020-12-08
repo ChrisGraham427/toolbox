@@ -1,0 +1,18 @@
+.bottomnav {
+  height: 3.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $backgroundgrey;
+  border-top: 4px solid $maingrey;
+  box-shadow: 0 6px 2px $maingrey;
+  &__logo {
+    padding: 0.75rem;
+    height: 35px;
+    width: 35px;
+    background-position: center;
+  }
+  &__title {
+    width: 120px;
+  }
+}

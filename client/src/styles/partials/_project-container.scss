@@ -1,0 +1,7 @@
+.project__container {
+  &-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+  }
+}
