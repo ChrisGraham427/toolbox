@@ -13,9 +13,6 @@ export default function ImageList(props) {
             return <Image key={image.id} data={image} />;
           })}
       </ul>
-      <div className="image__container-delete">
-        <span className="image__container-delete-span" />
-      </div>
     </section>
   );
 }

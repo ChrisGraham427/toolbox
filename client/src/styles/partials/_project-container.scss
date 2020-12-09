@@ -1,7 +1,11 @@
 .project__container {
   &-list {
+    width: 540px;
+    height: 690px;
+    overflow: scroll;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     list-style-type: none;
   }

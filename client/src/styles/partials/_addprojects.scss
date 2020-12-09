@@ -1,6 +1,9 @@
 .addproject {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   color: #fafafa;
-  height: 480px;
+  height: 535px;
   background-color: $backgroundgrey;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px $mainyellow;

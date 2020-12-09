@@ -1,9 +1,10 @@
 .addcontact {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  color: #fafafa;
-  height: 480px;
+  justify-content: space-around;
+  align-items: center;
+  color: $mainwhite;
+  height: 535px;
   background-color: $backgroundgrey;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px $mainyellow;
@@ -22,10 +23,9 @@
     flex-direction: column;
     justify-content: space-between;
 
-    width: 450px;
+    width: 350px;
   }
   &__form-input {
-    width: 80%;
     background-color: $maingrey;
   }
   &__form-input::placeholder {

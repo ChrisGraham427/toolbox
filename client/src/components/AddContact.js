@@ -47,11 +47,12 @@ export default function AddContact(props) {
           placeholder="1"
           className="addcontact__form-input"
         />
-        <button className="addcontact__form-button" type="submit">
-          ADD CONTACT
-        </button>
+        <div className="addcontact__form-button-div">
+          <button className="addcontact__form-button" type="submit">
+            ADD CONTACT
+          </button>
+        </div>
       </form>
-      <div className="addcontact__form-button-div"></div>
     </section>
   );
 }

@@ -252,6 +252,9 @@ body {
 }
 
 .project__container-list {
+  width: 540px;
+  height: 690px;
+  overflow: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,6 +262,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -392,6 +397,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -454,11 +462,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #fafafa;
-  height: 480px;
+  height: 535px;
   background-color: #4c4c4c;
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 2px 4px #ece936;
@@ -488,11 +498,10 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 450px;
+  width: 350px;
 }
 
 .addcontact__form-input {
-  width: 80%;
   background-color: #b7b8b26e;
 }
 
@@ -542,8 +551,18 @@ body {
 }
 
 .addproject {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   color: #fafafa;
-  height: 480px;
+  height: 535px;
   background-color: #4c4c4c;
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 2px 4px #ece936;
@@ -637,7 +656,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   color: #fafafa;
-  height: 300px;
+  height: 530px;
   background-color: #4c4c4c;
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 2px 4px #ece936;
@@ -943,16 +962,16 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: #4c4c4c;
   border-radius: 0.5rem;
   width: 60%;
-  height: 30rem;
+  height: 535px;
 }
 
 .image__container-list {
@@ -961,7 +980,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 560px;
+  width: 740px;
   height: 280px;
   overflow: scroll;
 }

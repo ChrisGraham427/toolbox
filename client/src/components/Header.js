@@ -12,7 +12,7 @@ function Header() {
       </Link>
       <div className="navbar__links">
         <Link to="/project">
-          <button className="navbar__button">DASHBOARD</button>
+          <button className="navbar__button">MANAGE</button>
         </Link>
         <Link to="/schedule">
           <button className="navbar__button">CALENDAR</button>
