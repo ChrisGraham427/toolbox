@@ -12,6 +12,7 @@ export default function ProjectList(props) {
                 key={project.id}
                 data={project}
                 handleSubmit={props.handleSubmit}
+                submitDelete={props.submitDelete}
               />
             );
           })}

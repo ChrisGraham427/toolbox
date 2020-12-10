@@ -13,7 +13,7 @@ export default function ProjectMain(props) {
         <Aside className="project__main-left-column" />
         <div className="project__main-right-column">
           <AddProject handleSubmit={props.handleSubmit} />
-          <ProjectList data={props.data} />
+          <ProjectList data={props.data} submitDelete={props.submitDelete} />
         </div>
       </section>
       <Footer />

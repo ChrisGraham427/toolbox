@@ -13,6 +13,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import Scheduler from "./components/Scheduler";
+// import e from "express";
 const API_URL = "http://localhost:8080";
 
 class App extends Component {
@@ -20,6 +21,8 @@ class App extends Component {
     project: [],
     contact: [],
     image: [],
+    description: "",
+    selectedFile: "",
   };
 
   componentDidMount() {
@@ -69,6 +72,21 @@ class App extends Component {
   };
 
   //======----===---===-=---
+
+  //=====DELETE PROJECTS=======
+  handleDeleteProjects = (event, id) => {
+    this.setState({ id: event.target.value });
+  };
+  handleDeleteSubmitProject = (event, id) => {
+    console.log("DELETE");
+    event.preventDefault();
+
+    axios.delete(`${API_URL}/project/${id}`).then(() => {
+      this.getProject();
+    });
+  };
+
+  ///============GET CONTACTS==================
   getContacts() {
     axios
       .get(`${API_URL}/contact`)
@@ -82,7 +100,7 @@ class App extends Component {
         console.log(err);
       });
   }
-  // POST Functions-----------------------------
+  // POST CONTACT Functions-----------------------------
   handleChangeContacts = (event) => {
     this.setState({ contact: event.target.value });
   };
@@ -107,7 +125,7 @@ class App extends Component {
     });
   };
   //------------------------------------------------
-  //=====DELETE=======
+  //=====DELETE CONTACTS=======
   handleDeleteContacts = (event, id) => {
     this.setState({ id: event.target.value });
   };
@@ -115,10 +133,12 @@ class App extends Component {
     console.log("DELETE");
     event.preventDefault();
 
-    axios.delete(`${API_URL}/contact/${id}`).then((res) => {});
+    axios.delete(`${API_URL}/contact/${id}`).then(() => {
+      this.getContacts();
+    });
   };
 
-  //=====================
+  //=========GET IMAGES============
   getImages() {
     axios
       .get(`${API_URL}/image`)
@@ -131,16 +151,37 @@ class App extends Component {
         console.log(err);
       });
   }
+  //=======POST IMAGE-----------
+
+  onChangeImage = (event) => {
+    this.setState({ selectedFile: event.target.files[0] });
+  };
+  handleSubmitImage = (event) => {
+    event.preventDefault();
+    const description = event.target.description.value;
+    const title = event.target.title.value;
+    const { selectedFile } = this.state;
+
+    let formData = new FormData();
+
+    formData.append("description", description);
+    formData.append("selectedFile", selectedFile);
+    formData.append("title", title);
+
+    axios.post(`${API_URL}/image`, formData).then((result) => {
+      console.log(result);
+    });
+  };
 
   //======DELETE IMAGE==========
-  handleDeleteImage = (event) => {
+  handleDeleteImage = (event, id) => {
     this.setState({ id: event.target.value });
   };
-  handleDeleteSubmitImage = (event) => {
+  handleDeleteSubmitImage = (event, id) => {
     event.preventDefault();
 
-    axios.delete(`${API_URL}/image/${this.state.contact.id}`).then((res) => {
-      console.log(res.data);
+    axios.delete(`${API_URL}/image/${id}`).then(() => {
+      this.getImages();
     });
   };
   //==============================
@@ -154,6 +195,7 @@ class App extends Component {
             render={() => (
               <ProjectMain
                 handleSubmit={this.handleSubmitProject}
+                submitDelete={this.handleDeleteSubmitProject}
                 data={this.state.project}
               />
             )}
@@ -174,6 +216,8 @@ class App extends Component {
             path="/images"
             render={() => (
               <ImageMain
+                changeImage={this.onChangeImage}
+                submitImage={this.handleSubmitImage}
                 submitDelete={this.handleDeleteSubmitImage}
                 data={this.state.image}
               />

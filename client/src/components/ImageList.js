@@ -10,7 +10,14 @@ export default function ImageList(props) {
         {imageList &&
           imageList.map((image) => {
             console.log(image);
-            return <Image key={image.id} data={image} />;
+            return (
+              <Image
+                submitImage={props.submitImage}
+                key={image.id}
+                data={image}
+                submitDelete={props.submitDelete}
+              />
+            );
           })}
       </ul>
     </section>

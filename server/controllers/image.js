@@ -7,16 +7,16 @@ function getImage(req, res) {
 }
 
 function postImage(req, res) {
+  console.log("POST IMAGE", req.body, req.file);
   new Image({
-    source: req.body.source,
+    source: `http://localhost:8080/image/images/${req.file.filename}`,
     description: req.body.description,
-    alt: req.body.alt,
-    project_id: req.body.project_id,
-    categories: JSON.stringify(req.body.categories),
+    alt: req.body.title,
+    project_id: 12,
   })
     .save()
     .then((newImage) => {
-      res.status(201).json({ newImage });
+      res.status(201).json(newImage);
     })
     .catch((err) => console.error(err));
 }
@@ -30,10 +30,10 @@ function getImageById(req, res) {
 }
 
 function delImage(req, res) {
-  Project.where("id", req.params.id)
+  Image.where("id", req.params.id)
     .destroy()
     .then((deletedImage) => {
-      res.status(200).json({ deletedImage });
+      res.status(200).json(deletedImage);
     });
 }
 

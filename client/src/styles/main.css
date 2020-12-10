@@ -252,7 +252,7 @@ body {
 }
 
 .project__container-list {
-  width: 540px;
+  width: 790px;
   height: 690px;
   overflow: scroll;
   display: -webkit-box;
@@ -285,6 +285,7 @@ body {
   background-color: #4c4c4c;
   color: #fafafa;
   width: 15rem;
+  height: 344px;
   -webkit-box-shadow: 0 2px 4px #ece936;
           box-shadow: 0 2px 4px #ece936;
   margin-top: 1rem;

@@ -5,8 +5,9 @@
 
   border-radius: 0.5rem;
   background-color: $backgroundgrey;
-  color: #fafafa;
+  color: $mainwhite;
   width: 15rem;
+  height: 344px;
   box-shadow: 0 2px 4px $mainyellow;
   margin-top: 1rem;
   margin-right: 1rem;
@@ -41,7 +42,7 @@
     color: $mainyellow;
   }
   &-item-address {
-    color: #fafafa;
+    color: $mainwhite;
     margin: 0;
     font-size: 0.75rem;
   }
@@ -50,7 +51,7 @@
     margin: 0;
   }
   &-address-title {
-    color: #fafafa;
+    color: $mainwhite;
     font-size: 1rem;
     margin: 0;
     padding-top: 2px;
