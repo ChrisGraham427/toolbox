@@ -6,18 +6,18 @@ export default function AddImage(props) {
       <h1 className="addimage__title">UPLOAD IMAGE</h1>
       <img src={props.file} alt="test" />
       <form
-        enctype="multipart/form-data"
+        encType="multipart/form-data"
         className="addimage__form"
         onSubmit={props.submitImage}
       >
-        <label className="addimage__form-label">Description</label>
+        <label className="addimage__form-label">Title</label>
         <input
           type="text"
           name="description"
           placeholder="Add Image Description"
           className="addimage__form-input"
         />
-        <label className="addimage-label">Image Title</label>
+        <label className="addimage__form-label">Image Description</label>
         <input
           type="text"
           name="title"
@@ -31,6 +31,8 @@ export default function AddImage(props) {
           className="addimage__form-input"
           onChange={props.changeImage}
         />
+        <label className="addimage__form-label">Project #</label>
+        <input type="int" name="project_id" className="addimage__form-input" />
         <button className="addimage__form-button" type="submit">
           ADD IMAGE
         </button>

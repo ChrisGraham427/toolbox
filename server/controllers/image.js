@@ -12,7 +12,7 @@ function postImage(req, res) {
     source: `http://localhost:8080/image/images/${req.file.filename}`,
     description: req.body.description,
     alt: req.body.title,
-    project_id: 12,
+    project_id: req.body.project_id,
   })
     .save()
     .then((newImage) => {

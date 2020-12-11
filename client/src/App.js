@@ -3,9 +3,11 @@ import axios from "axios";
 import ProjectMain from "./components/ProjectMain";
 import ContactMain from "./components/ContactMain";
 import ImageMain from "./components/ImageMain";
+import TaskMain from "./components/TaskMain";
 import Hero from "./components/Hero";
 import LoginPage from "./components/LoginPage";
 import MainSchedule from "./components/MainSchedule";
+import moment, { relativeTimeThreshold } from "moment";
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,6 +15,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import Scheduler from "./components/Scheduler";
+import IDbyProject from "./components/IDbyProject";
 // import e from "express";
 const API_URL = "http://localhost:8080";
 
@@ -21,15 +24,71 @@ class App extends Component {
     project: [],
     contact: [],
     image: [],
+    task: [],
     description: "",
     selectedFile: "",
+    currentProject: "",
+    events: [
+      {
+        start: moment().toDate(),
+        end: moment().add(0, "days").toDate(),
+        title: "First Appointment",
+      },
+    ],
+    userData: {},
   };
 
   componentDidMount() {
+    // this.getUserData();
     this.getProject();
     this.getContacts();
     this.getImages();
+    this.getTasks();
+    this.getProjectbyID();
   }
+  //=============SCHEDULER
+
+  onEventResize = (data) => {
+    const { start, end } = data;
+
+    this.setState((state) => {
+      state.events[0].start = start;
+      state.events[0].end = end;
+      return { events: [...state.events] };
+    });
+  };
+
+  onEventDrop = (data) => {
+    console.log(data);
+  };
+  // ++++USER+++++++
+  getUserData = () => {
+    axios
+      .get(`${API_URL}/profile`)
+      .then((response) => {
+        const { data: userData } = response;
+        if (Object.keys(userData).length === 0) {
+          console.log("need to login");
+          return;
+        } else {
+          console.log(userData);
+          this.setState({ userData });
+        }
+      })
+      .catch((err) => console.log(err));
+  };
+
+  handleLogout = () => {
+    axios
+      .get(`${API_URL}/auth/logout`)
+      .then((response) => {
+        console.log(response);
+        this.setState({ userData: {} });
+      })
+      .catch((err) => console.log(err));
+  };
+
+  ////+++++++++++++++++
 
   getProject() {
     axios
@@ -44,6 +103,30 @@ class App extends Component {
         console.log(err);
       });
   }
+
+  getProjectbyID() {
+    axios
+      .get(`${API_URL}/project/:id`)
+      .then((res) => {
+        console.log("message:LOOK HERE", res.data);
+        this.setState({
+          project: res.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  handleProjectById = (event, callback) => {
+    event.preventDefault();
+    event.stopPropogation();
+    console.log("IDEVENT", event.target.projectId);
+    this.setState(
+      { currentProject: event.target.projectId.value },
+      callback(this.state.currentProject)
+    );
+  };
   //----------------------POST PROJECT
   handleChangeProject = (event) => {
     this.setState({ project: event.target.value });
@@ -160,6 +243,7 @@ class App extends Component {
     event.preventDefault();
     const description = event.target.description.value;
     const title = event.target.title.value;
+    const project_id = event.target.project_id.value;
     const { selectedFile } = this.state;
 
     let formData = new FormData();
@@ -167,9 +251,10 @@ class App extends Component {
     formData.append("description", description);
     formData.append("selectedFile", selectedFile);
     formData.append("title", title);
+    formData.append("project_id", project_id);
 
     axios.post(`${API_URL}/image`, formData).then((result) => {
-      console.log(result);
+      this.getImages();
     });
   };
 
@@ -185,6 +270,51 @@ class App extends Component {
     });
   };
   //==============================
+  //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\TASK\\\\\\\\\\\\\\\\
+  getTasks() {
+    axios
+      .get(`${API_URL}/task`)
+      .then((res) => {
+        console.log(res);
+        this.setState({
+          task: res.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  handleChangeTasks = (event) => {
+    this.setState({ task: event.target.value });
+  };
+  handleSubmitTask = (event) => {
+    event.preventDefault();
+
+    const task = {
+      category: event.target.category.value,
+      task: event.target.task.value,
+      description: event.target.description.value,
+
+      project_id: event.target.project_id.value,
+    };
+
+    axios.post(`${API_URL}/task`, { task }).then((res) => {
+      this.setState({ task: [...this.state.task, res.data] });
+    });
+  };
+
+  handleDeleteTasks = (event, id) => {
+    this.setState({ id: event.target.value });
+  };
+  handleDeleteSubmitTasks = (event, id) => {
+    console.log("DELETE");
+    event.preventDefault();
+
+    axios.delete(`${API_URL}/task/${id}`).then(() => {
+      this.getTasks();
+    });
+  };
 
   render() {
     return (
@@ -225,8 +355,49 @@ class App extends Component {
             exact
           />
           <Route path="/" component={Hero} exact />
-          <Route path="/login" component={LoginPage} exact />
-          <Route path="/schedule" component={MainSchedule} exact />
+          <Route
+            path="/login"
+            render={() => (
+              <LoginPage
+                data={this.state.userData}
+                handleLogout={this.handleLogout}
+              />
+            )}
+            exact
+          />
+          <Route
+            path="/schedule"
+            render={() => (
+              <MainSchedule
+                onEventResize={this.onEventResize}
+                onEventDrop={this.onEventDrop}
+                data={this.state.events}
+              />
+            )}
+            exact
+          />
+          <Route
+            path="/task"
+            render={() => (
+              <TaskMain
+                submitDelete={this.handleDeleteSubmitTasks}
+                handleSubmit={this.handleSubmitTask}
+                data={this.state.task}
+              />
+            )}
+            exact
+          />
+          <Route
+            path="/project/:id"
+            render={() => (
+              <IDbyProject
+                data={this.state.project}
+                currentProjectId={this.state.currentProject}
+                getProjectbyID={this.getProjectbyID}
+              />
+            )}
+            exact
+          />
         </Switch>
       </div>
     );

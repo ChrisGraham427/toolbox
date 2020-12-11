@@ -1,6 +1,7 @@
 const projectData = require("../seeddata/project");
 const contactData = require("../seeddata/contact");
 const imageData = require("../seeddata/images");
+const taskData = require("../seeddata/task");
 const { map } = require("../seeddata/images");
 
 exports.seed = function (knex) {
@@ -28,6 +29,7 @@ exports.seed = function (knex) {
             .then((data) => data);
         });
     })
+
     .then((newData) => {
       const images = imageData.map((newImage) => {
         newImage["project_id"] =
@@ -35,5 +37,12 @@ exports.seed = function (knex) {
         return newImage;
       });
       return knex("images").insert(images);
+    })
+    .then(async () => {
+      return await knex("tasks")
+        .del()
+        .then(async () => {
+          return await knex("tasks").insert(taskData);
+        });
     });
 };

@@ -19,7 +19,10 @@
 @import "./partials/login-page";
 @import "./partials/image-container";
 @import "./partials/contact-container";
-
+@import "./partials/addtask";
+@import "./partials/task-container";
+@import "./partials/task-card";
+@import "./partials/task-main";
 .mainbody {
   background-color: $maingrey;
   margin-top: -5px;

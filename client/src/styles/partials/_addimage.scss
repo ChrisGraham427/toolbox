@@ -1,7 +1,7 @@
 .addimage {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   color: $mainwhite;
   height: 530px;
@@ -20,6 +20,7 @@
     margin-left: 0.5rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 350px;
   }
   &__form-input {
@@ -39,7 +40,11 @@
     border: none;
     background-color: $mainyellow;
     color: $mainblack;
-    margin-bottom: 0.5rem;
+    margin: 0.5rem 0 0.5rem 0;
     font-weight: bolder;
+  }
+  &__form-label {
+    font-size: 0.75rem;
+    padding: 0.5rem 0 0.125rem 0;
   }
 }

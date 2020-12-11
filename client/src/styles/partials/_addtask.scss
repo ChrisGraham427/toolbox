@@ -1,0 +1,71 @@
+.addtask {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: $mainwhite;
+  height: 535px;
+  background-color: $backgroundgrey;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px $mainyellow;
+  width: 400px;
+  &__title {
+    text-align: center;
+    margin: 0;
+    padding-top: 0.5rem;
+  }
+  &__label {
+    text-align: left;
+  }
+  &__form {
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 350px;
+  }
+  &__form-input {
+    background-color: $maingrey;
+    border-radius: 0.25rem;
+  }
+  &__form-input::placeholder {
+    color: $mainwhite;
+    font-size: 0.625rem;
+    padding-left: 0.5rem;
+  }
+
+  &__form-button {
+    width: 120px;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: $mainyellow;
+    color: $mainblack;
+    margin-bottom: 0.5rem;
+    font-weight: bolder;
+  }
+  &__form-button-div {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  &__form-label {
+    font-size: 0.75rem;
+    padding: 0.5rem 0 0.125rem 0;
+  }
+  &__form-textarea {
+    height: 120px;
+    border-radius: 0.25rem;
+    background-color: $maingrey;
+  }
+  &__form-textarea:active {
+    color: $mainwhite;
+  }
+
+  &__form-select {
+    border-radius: 0.25rem;
+    background-color: $maingrey;
+    color: $mainwhite;
+  }
+}

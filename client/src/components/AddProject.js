@@ -12,12 +12,12 @@ export default function AddProject(props) {
           placeholder="Project Title"
           className="addproject__form-input"
         />
-        <label className="addproject-label">Description</label>
-        <input
+        <label className="addproject__form-label">Description</label>
+        <textarea
           type="text"
           name="description"
           placeholder="Project Description"
-          className="addproject__form-input"
+          className="addproject__form-input-description"
         />
         <label className="addproject__form-label">Street Number</label>
         <input
@@ -61,7 +61,35 @@ export default function AddProject(props) {
           className="addproject__form-input"
         />
         <label className="addproject__form-label">End Date</label>
+
         <input type="date" name="endDate" className="addproject__form-input" />
+        {/* <div className="addproject__form-radio">
+          <label for="contactChoice1">Active</label>
+          <input
+            type="radio"
+            id="contactChoice1"
+            name="contact"
+            value="active"
+          />
+
+          <label for="contactChoice3">On Hold</label>
+          <input
+            type="radio"
+            id="contactChoice3"
+            name="contact"
+            value="onHold"
+          />
+        </div>
+
+        <select className="addproject__form-select" name="type">
+          <option value="">-PROJECT TYPE--</option>
+          <option value="renovation">RENOVATION</option>
+          <option value="remodel">REMODEL</option>
+          <option value="designOnly">DESIGN ONLY</option>
+          <option value="subContract">SUBCONTRACT</option>
+          <option value="newConstruction">NEW CONSTRUCTION</option>
+          <option value="quote">QUOTE</option>
+        </select> */}
         <div className="addproject__form-button-div">
           <button className="addproject__form-button" type="submit">
             ADD PROJECT

@@ -12,7 +12,7 @@ export default function AddContact(props) {
           placeholder="Your Name"
           className="addcontact__form-input"
         />
-        <label className="addcontact-label">Company</label>
+        <label className="addcontact__form-label">Company</label>
         <input
           type="text"
           name="company"
@@ -47,6 +47,7 @@ export default function AddContact(props) {
           placeholder="1"
           className="addcontact__form-input"
         />
+
         <div className="addcontact__form-button-div">
           <button className="addcontact__form-button" type="submit">
             ADD CONTACT

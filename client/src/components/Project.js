@@ -40,7 +40,8 @@ export default function Project(props) {
           DELETE
         </button>
       </form>
-      <p>{id}</p>
+      <h3 className="project__card-id">PROJECT #</h3>
+      <p className="project__card-id">{id}</p>
     </li>
   );
 }

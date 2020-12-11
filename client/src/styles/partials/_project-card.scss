@@ -7,7 +7,7 @@
   background-color: $backgroundgrey;
   color: $mainwhite;
   width: 15rem;
-  height: 344px;
+  height: 535px;
   box-shadow: 0 2px 4px $mainyellow;
   margin-top: 1rem;
   margin-right: 1rem;
@@ -15,8 +15,14 @@
     margin: 0.5rem 0;
   }
   &-description {
+    font-size: 0.75rem;
+    border: 1px solid $backgroundgrey;
+    border-radius: 4px;
+    background-color: $maingrey;
+    color: $mainwhite;
+    height: 170px;
     width: 90%;
-    margin-left: 5%;
+    overflow: hidden;
   }
   &-button {
     height: 1.25rem;
@@ -33,7 +39,7 @@
     padding-top: 1rem;
     text-align: center;
     width: 100%;
-    margin: 0;
+    margin: 0 0 1rem 0;
   }
   &-address-container {
     text-align: center;
@@ -66,5 +72,8 @@
     background-color: $maingrey;
     border-radius: 4px;
     padding: 3px;
+  }
+  &-id {
+    margin: 0.25rem 0 0 0;
   }
 }

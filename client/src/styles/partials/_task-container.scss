@@ -1,0 +1,11 @@
+.task__container {
+  &-list {
+    height: 570px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: scroll;
+    align-items: center;
+    list-style-type: none;
+  }
+}

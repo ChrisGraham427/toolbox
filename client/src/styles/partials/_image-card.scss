@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-evenly;
   border-radius: 0.5rem;
-  background-color: $maingrey;
+  background-color: $backgroundgrey;
   color: $mainwhite;
   height: 15rem;
   width: 12rem;
@@ -23,10 +23,21 @@
     font-weight: bolder;
   }
   &-description {
+    font-size: 1rem;
+    overflow: hidden;
     margin-bottom: 0;
   }
   &-image {
     height: 110px;
     width: 180px;
+  }
+  &-projecttitle {
+    margin: 0;
+    padding-top: 0.25rem;
+    font-size: 0.625rem;
+  }
+  &-projectid {
+    margin: 0;
+    text-decoration: underline;
   }
 }

@@ -32,6 +32,15 @@ export default class Aside extends React.Component {
             />
           </div>
         </Link>
+        <Link to="/task">
+          <div className="aside__logo-icon">
+            <label className="aside__logo-title">TASKS</label>
+            <img
+              src={process.env.PUBLIC_URL + "/picture.svg"}
+              className="aside__logo"
+            />
+          </div>
+        </Link>
       </aside>
     );
   }

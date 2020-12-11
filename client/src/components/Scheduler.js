@@ -1,36 +1,25 @@
-import Calendar from "tui-calendar"; /* ES6 */
-import "tui-calendar/dist/tui-calendar.css";
+import { Calendar, momentLocalizer } from "react-big-calendar";
+import moment from "moment";
+import withDragAndDrop from "react-big-calendar/lib/addons/dragAndDrop";
+import "react-big-calendar/lib/addons/dragAndDrop/styles.css";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+const localizer = momentLocalizer(moment);
+const DnDCalendar = withDragAndDrop(Calendar);
 
-// // If you use the default popups, use this.
-// import "tui-date-picker/dist/tui-date-picker.css";
-// import "tui-time-picker/dist/tui-time-picker.css";
-export default function Scheduler() {
-  var calendar = new Calendar("#calendar", {
-    defaultView: "day",
-    taskView: true,
-    template: {
-      monthDayname: function (dayname) {
-        console.log(dayname.label);
-        return (
-          <div id="calendar" style="height:50px;">
-            <span class="calendar-week-dayname-name">{dayname.label}</span>
-          </div>
-        );
-      },
-    },
-  });
+export default function Scheduler(props) {
+  console.log("PROPS", props.events);
+  return (
+    <div className="App">
+      <DnDCalendar
+        defaultDate={moment().toDate()}
+        defaultView="month"
+        events={props.data}
+        localizer={localizer}
+        onEventDrop={props.onEventDrop}
+        onEventResize={props.onEventResize}
+        resizable
+        style={{ height: "83.25vh" }}
+      />
+    </div>
+  );
 }
-// return (
-//     <section className="scheduler__main">
-//       <Header />
-//       <section className="scheduler__main-column">
-//         <Aside className="scheduler__main-left-column" />
-//         <div className="scheduler__main-right-column">
-//           <div id="calendar" style="height:800px;">
-//             <Calendar />
-//           </div>
-//         </div>
-//       </section>
-//       <Footer />
-//     </section>
-//   );

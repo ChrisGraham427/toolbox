@@ -1,53 +1,27 @@
 const API_URL = "http://localhost:8080";
-export default function LoginForm() {
+export default function LoginForm(props) {
+  console.log(props);
+
   return (
     <section className="addlogin">
-      <form
-        encType="multipart/form-data"
-        method="POST"
-        action={`${API_URL}/contact`}
-        className="addlogin__form"
-      >
-        <label className="addlogin__form-label">Name</label>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          className="addlogin__form-input"
-        />
-        <label className="addlogin-label">Company</label>
-        <input
-          type="text"
-          name="company"
-          placeholder="Your Company"
-          className="addlogin__form-input"
-        />
-        <label className="addcontact__form-label">Position</label>
-        <input
-          type="text"
-          name="position"
-          placeholder="Your Position"
-          className="addlogin__form-input"
-        />
-        <label className="addcontact__form-label">Email</label>
-        <input
-          type="email"
-          name="email"
-          placeholder="someone@somecompany.com"
-          className="addlogin__form-input"
-        />
-        <label className="addcontact__form-label">Phone</label>
-        <input
-          type="tel"
-          name="phone"
-          placeholder="(123) 123-4567"
-          className="addlogin__form-input"
-        />
-      </form>
-      <div className="addlogin__form-button-div">
-        <button className="addlogin__form-button" type="submit">
-          CREATE LOGIN
-        </button>
+      <div>
+        <h1>Log In</h1>
+        {!Object.keys(props.data).length ? (
+          <>
+            <p>Login with github 👇</p>
+            <a href={`${API_URL}/auth/github`}>LOGIN</a>
+          </>
+        ) : (
+          <>
+            <h2>Welcome {props.data.displayName}</h2>
+            <img
+              className="user-avatar"
+              src={props.data.photos[0].value}
+              alt="user profile avatar"
+            />
+            <button onClick={props.handleLogout}>logout</button>
+          </>
+        )}
       </div>
     </section>
   );
