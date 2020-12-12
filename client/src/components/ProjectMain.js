@@ -8,7 +8,6 @@ export default function ProjectMain(props) {
   console.log(props);
   return (
     <section className="project__main">
-      <Header />
       <section className="project__main-column">
         <Aside className="project__main-left-column" />
         <div className="project__main-right-column">
@@ -16,7 +15,6 @@ export default function ProjectMain(props) {
           <ProjectList data={props.data} submitDelete={props.submitDelete} />
         </div>
       </section>
-      <Footer />
     </section>
   );
 }

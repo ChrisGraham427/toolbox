@@ -7,7 +7,6 @@ import AddContact from "./AddContact";
 export default function ContactMain(props) {
   return (
     <section className="contact__main">
-      <Header />
       <section className="contact__main-column">
         <Aside className="contact__main-left-column" />
         <div className="contact__main-right-column">
@@ -15,7 +14,6 @@ export default function ContactMain(props) {
           <ContactList data={props.data} submitDelete={props.submitDelete} />
         </div>
       </section>
-      <Footer />
     </section>
   );
 }

@@ -37,4 +37,16 @@
     color: $mainblack;
     transform: scale(1.125);
   }
+  &__input {
+    font-size: 0.625rem;
+    height: 1.75rem;
+    border-radius: 0.25rem;
+    width: 185px;
+    background-color: $maingrey;
+    color: $mainwhite;
+    margin-right: 1rem;
+  }
+  &__input::placeholder {
+    color: $mainwhite;
+  }
 }

@@ -7,7 +7,7 @@ const localizer = momentLocalizer(moment);
 const DnDCalendar = withDragAndDrop(Calendar);
 
 export default function Scheduler(props) {
-  console.log("PROPS", props.events);
+  console.log("PROPS", props);
   return (
     <div className="App">
       <DnDCalendar

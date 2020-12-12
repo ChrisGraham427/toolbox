@@ -14,6 +14,7 @@
     text-align: center;
     margin: 0;
     padding-top: 0.5rem;
+    font-size: 1.25rem;
   }
   &__form {
     padding-top: 0.5rem;
@@ -26,6 +27,7 @@
   &__form-input {
     width: 85%;
     background-color: $maingrey;
+    border-radius: 0.25rem;
   }
   &__form-input::placeholder {
     color: $mainwhite;

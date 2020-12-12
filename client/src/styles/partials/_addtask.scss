@@ -8,11 +8,13 @@
   background-color: $backgroundgrey;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px $mainyellow;
+  padding: 0 0.5rem;
   width: 400px;
   &__title {
     text-align: center;
     margin: 0;
     padding-top: 0.5rem;
+    font-size: 1.75rem;
   }
   &__label {
     text-align: left;

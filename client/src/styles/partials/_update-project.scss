@@ -1,43 +1,48 @@
-.addcontact {
+.updateproject {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   color: $mainwhite;
-  height: 535px;
+  height: 82.5vh;
+
   background-color: $backgroundgrey;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px $mainyellow;
-  width: 400px;
+
   &__title {
     text-align: center;
     margin: 0;
     padding-top: 0.5rem;
     font-size: 1.25rem;
   }
-  &__label {
-    text-align: left;
-  }
   &__form {
     padding-top: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
-    width: 350px;
   }
   &__form-input {
+    width: 500px;
     background-color: $maingrey;
+    color: $mainwhite;
     border-radius: 0.25rem;
   }
   &__form-input::placeholder {
     color: $mainwhite;
     font-size: 0.625rem;
     padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
-
+  &__form-input-description {
+    height: 64px;
+    width: 500px;
+    background-color: $maingrey;
+    text-overflow: auto;
+    color: $mainwhite;
+  }
   &__form-button {
-    width: 120px;
     padding: 0.5rem;
     border-radius: 0.25rem;
     border: none;
@@ -54,5 +59,17 @@
   &__form-label {
     font-size: 0.75rem;
     padding: 0.5rem 0 0.125rem 0;
+  }
+
+  &__form-radio {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+  &__form-radio:active {
+    color: $mainyellow;
+  }
+  &__form-select {
+    background-color: $maingrey;
+    color: $mainwhite;
   }
 }

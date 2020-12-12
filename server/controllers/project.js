@@ -17,7 +17,7 @@ function postProject(req, res) {
     city: req.body.project.city,
     province: req.body.project.province,
     postalCode: req.body.project.postalCode,
-    contact: req.body.project.contact,
+
     images: req.body.project.images,
     contact: req.body.project.contact,
     startDate: req.body.project.startDate,
@@ -39,40 +39,81 @@ function getProjectById(req, res) {
 }
 
 function updateProject(req, res) {
-  Project.where("id", req.params.id)
+  console.log("ONE", req.body);
+  Project.where({ id: req.params.id })
     .fetch()
     .then((project) => {
+      console.log("LOOK HERE", req.body.project.title);
       project
-        .save({
-          title: req.body.title ? req.body.title : project.title,
-          description: req.body.description
-            ? req.body.title
-            : project.description,
-          streetNumber: req.body.streetNumber
-            ? req.body.streetNumber
-            : project.streetNumber,
-          streetName: req.body.streetName
-            ? req.body.streetName
-            : project.streetName,
-          city: req.body.city ? req.body.city : project.city,
-          province: req.body.province ? req.body.province : project.province,
-          postalCode: req.body.postalCode
-            ? req.body.postalCode
-            : project.postalCode,
-          contact: req.body.contact ? req.body.contact : project.contact,
-          images: req.body.images ? req.body.images : project.images,
-          startDate: req.body.startDate
-            ? req.body.startDate
-            : project.startDate,
-          endDate: req.body.endDate ? req.body.endDate : project.endDate,
-          categories: JSON.stringify(req.body.categories)
-            ? JSON.stringify(req.body.categories)
-            : project.categories,
-        })
+        .save(
+          {
+            title: req.body.project.title
+              ? req.body.project.title
+              : project.title,
+            description: req.body.project.description
+              ? req.body.project.description
+              : project.description,
+            streetNumber: req.body.project.streetNumber
+              ? req.body.project.streetNumber
+              : project.streetNumber,
+            streetName: req.body.project.streetName
+              ? req.body.project.streetName
+              : project.streetName,
+            city: req.body.project.city ? req.body.project.city : project.city,
+            province: req.body.project.province
+              ? req.body.project.province
+              : project.province,
+            postalCode: req.body.project.postalCode
+              ? req.body.project.postalCode
+              : project.postalCode,
+            startDate: req.body.project.startDate
+              ? req.body.project.startDate
+              : project.startDate,
+            endDate: req.body.project.endDate
+              ? req.body.project.endDate
+              : project.endDate,
+          }
+          // { patch: true }
+        )
         .then((updatedProject) => {
+          console.log(updatedProject);
           res.status(200).json({ updatedProject });
         });
     });
+  // Project.where("id", req.params.id)
+  //   .fetch()
+  //   .then((project) => {
+  //     project
+  // .save({
+  //   title: req.body.title ? req.body.title : project.title,
+  //   description: req.body.description
+  //     ? req.body.title
+  //     : project.description,
+  //   streetNumber: req.body.streetNumber
+  //     ? req.body.streetNumber
+  //     : project.streetNumber,
+  //   streetName: req.body.streetName
+  //     ? req.body.streetName
+  //     : project.streetName,
+  //   city: req.body.city ? req.body.city : project.city,
+  //   province: req.body.province ? req.body.province : project.province,
+  //   postalCode: req.body.postalCode
+  //     ? req.body.postalCode
+  //     : project.postalCode,
+  //   contact: req.body.contact ? req.body.contact : project.contact,
+  //   images: req.body.images ? req.body.images : project.images,
+  //   startDate: req.body.startDate
+  //     ? req.body.startDate
+  //     : project.startDate,
+  //   endDate: req.body.endDate ? req.body.endDate : project.endDate,
+  //   categories: JSON.stringify(req.body.categories)
+  //     ? JSON.stringify(req.body.categories)
+  //     : project.categories,
+  // })
+  // .then((updatedProject) => {
+  //   res.status(200).json({ updatedProject });
+  // });
+  //   });
 }
 
 function delProject(req, res) {

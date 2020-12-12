@@ -5,7 +5,7 @@ export default function Task(props) {
       <section className="task__card-main">
         <h2 className="task__card-name">{task}</h2>
         <p className="task__card">{category}</p>
-        <p className="task__card">{description}</p>
+        <p className="task__card-description">{description}</p>
         <form
           onSubmit={(event) => {
             props.submitDelete(event, id);

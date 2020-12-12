@@ -7,6 +7,9 @@ import TaskMain from "./components/TaskMain";
 import Hero from "./components/Hero";
 import LoginPage from "./components/LoginPage";
 import MainSchedule from "./components/MainSchedule";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import UpdateProject from "./components/UpdateProject";
 import moment, { relativeTimeThreshold } from "moment";
 import {
   BrowserRouter as Router,
@@ -14,9 +17,9 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import Scheduler from "./components/Scheduler";
-import IDbyProject from "./components/IDbyProject";
-// import e from "express";
+
+import IDbyProject from "./components/IDbyProjectMain";
+
 const API_URL = "http://localhost:8080";
 
 class App extends Component {
@@ -44,7 +47,7 @@ class App extends Component {
     this.getContacts();
     this.getImages();
     this.getTasks();
-    this.getProjectbyID();
+    // this.getProjectbyID();
   }
   //=============SCHEDULER
 
@@ -117,10 +120,10 @@ class App extends Component {
         console.log(err);
       });
   }
-
-  handleProjectById = (event, callback) => {
+  //------------------------------------
+  handleProjectbyID = (event, callback) => {
     event.preventDefault();
-    event.stopPropogation();
+
     console.log("IDEVENT", event.target.projectId);
     this.setState(
       { currentProject: event.target.projectId.value },
@@ -154,12 +157,30 @@ class App extends Component {
     });
   };
 
-  //======----===---===-=---
+  //======----UPDATE PROJECT=---===-=---
+
+  updateProjectById = (data, id) => {
+    this.setState({ project: data });
+    console.log("this.state.project", this.state.project);
+    axios({
+      method: "put",
+      url: `${API_URL}/project/update/${id}`,
+      data: { project: data },
+    });
+    // axios.put(
+    //   `${API_URL}/project/${id}`,
+    //   { project: this.state.project },
+    //   (res) => {
+    //     console.log(res);
+    //   }
+    // );
+  };
 
   //=====DELETE PROJECTS=======
   handleDeleteProjects = (event, id) => {
     this.setState({ id: event.target.value });
   };
+
   handleDeleteSubmitProject = (event, id) => {
     console.log("DELETE");
     event.preventDefault();
@@ -275,7 +296,6 @@ class App extends Component {
     axios
       .get(`${API_URL}/task`)
       .then((res) => {
-        console.log(res);
         this.setState({
           task: res.data,
         });
@@ -319,6 +339,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Header handleProjectbyID={this.handleProjectbyID} />
         <Switch>
           <Route
             path="/project"
@@ -393,26 +414,24 @@ class App extends Component {
               <IDbyProject
                 data={this.state.project}
                 currentProjectId={this.state.currentProject}
-                getProjectbyID={this.getProjectbyID}
               />
             )}
             exact
           />
+          <Route
+            path="/update"
+            render={() => (
+              <UpdateProject
+                data={this.state.project}
+                updateProjectById={this.updateProjectById}
+              />
+            )}
+          />
         </Switch>
+        <Footer />
       </div>
     );
   }
 }
 
 export default App;
-
-// <Header />
-// <Aside />
-// <AddContact />
-// <AddProject />
-// <AddImage />
-// <ProjectList data={this.state.project} />
-// <ContactList data={this.state.contact} />
-// <ImageList data={this.state.image} />
-
-// <Footer />

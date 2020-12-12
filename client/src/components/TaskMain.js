@@ -7,7 +7,6 @@ import AddTask from "./AddTask";
 export default function TaskMain(props) {
   return (
     <section className="task__main">
-      <Header />
       <section className="task__main-column">
         <Aside className="task__main-left-column" />
         <div className="task__main-right-column">
@@ -15,7 +14,6 @@ export default function TaskMain(props) {
           <TaskList data={props.data} submitDelete={props.submitDelete} />
         </div>
       </section>
-      <Footer />
     </section>
   );
 }

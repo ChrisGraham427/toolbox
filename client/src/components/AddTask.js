@@ -3,20 +3,20 @@ const API_URL = "http://localhost:8080";
 export default function AddTask(props) {
   return (
     <section className="addtask">
-      <h1 className="addtask__title">MANAGE TASKS</h1>
+      <h1 className="addtask__title">CREATE TASKS</h1>
       <form onSubmit={props.handleSubmit} className="addtask__form">
         <label className="addtask__form-label">Category</label>
         <select className="addtask__form-select" name="category">
           <option value="">--SELECT TASK CATEGORY--</option>
-          <option value="estimate">Estimate</option>
-          <option value="scheduling">Scheduling</option>
-          <option value="demolition">Demolition</option>
-          <option value="framing">Framing</option>
-          <option value="painting">Painting</option>
-          <option value="drywall">Drywall</option>
-          <option value="design">Design</option>
-          <option value="changeOrder">Change Order</option>
-          <option value="invoice">Invoice</option>
+          <option value="Estimate">Estimate</option>
+          <option value="Scheduling">Scheduling</option>
+          <option value="Demolition">Demolition</option>
+          <option value="Framing">Framing</option>
+          <option value="Painting">Painting</option>
+          <option value="Drywall">Drywall</option>
+          <option value="Design">Design</option>
+          <option value="Change Order">Change Order</option>
+          <option value="Invoice">Invoice</option>
         </select>
         <label className="addtask__form-label">Task</label>
         <input type="text" name="task" className="addtask__form-input" />

@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { withRouter } from "react-router-dom";
 function Header(props) {
+  console.log(props);
   return (
     <header className="navbar">
       <Link to="/">
@@ -13,19 +14,26 @@ function Header(props) {
       <div className="navbar__links">
         <form
           onSubmit={(event) => {
-            props.getProjectById(event, (id) => {
-              props.history.push(`/${id}`);
+            props.handleProjectbyID(event, (id) => {
+              props.history.push(`/project/${id}`);
             });
           }}
         >
-          <input type="int" name="projectId" />
+          <input
+            className="navbar__input"
+            type="int"
+            name="projectId"
+            placeholder="ENTER AN ID, HIT PROJECT TO SEARCH"
+          />
           <button type="submit" className="navbar__button">
-            PROJECT #
+            PROJECT
           </button>
         </form>
-
+        <Link to="/update">
+          <button className="navbar__button">UPDATE</button>
+        </Link>
         <Link to="/project">
-          <button className="navbar__button">MANAGE</button>
+          <button className="navbar__button">CREATE</button>
         </Link>
         <Link to="/schedule">
           <button className="navbar__button">CALENDAR</button>
@@ -41,4 +49,4 @@ function Header(props) {
   );
 }
 
-export default Header;
+export default withRouter(Header);

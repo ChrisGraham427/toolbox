@@ -10,8 +10,8 @@ module.exports = [
     postalCode: "1A1 B2B",
     contact: "Frank",
     images: "1",
-    startDate: "Dec. 18/20",
-    endDate: "Dec. 18/21",
+    startDate: "2020-12-10",
+    endDate: "2020-12-10",
   },
   {
     title: "PROJECT TWO",
@@ -24,7 +24,7 @@ module.exports = [
     postalCode: "1A1 B2B",
     contact: "Bob",
     images: "1",
-    startDate: "Dec. 19/20",
-    endDate: "Dec. 19/21",
+    startDate: "2020-12-10",
+    endDate: "2020-12-10",
   },
 ];

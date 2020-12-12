@@ -6,7 +6,6 @@ export default function IDbyProject(props) {
   console.log(props);
   return (
     <section className="project__main">
-      <Header getProjectById={props.getProjectById} />
       <section className="project__main-column">
         <div className="project__main-right-column">
           <ProjectById
@@ -16,7 +15,6 @@ export default function IDbyProject(props) {
           />
         </div>
       </section>
-      <Footer />
     </section>
   );
 }
