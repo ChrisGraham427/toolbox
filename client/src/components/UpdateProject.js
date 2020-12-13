@@ -56,97 +56,111 @@ class UpdateProject extends Component {
   render() {
     return (
       <section className="updateproject">
-        <h1 className="updateproject__title">UPDATE PROJECTS</h1>
-        {Array.isArray(this.props.data) ? (
-          <select
-            className="updateproject__form-select"
-            closeMenuOnSelect={true}
-            onChange={this.handleProjectChange}
+        <div className="updateproject__div">
+          <h1 className="updateproject__title">UPDATE PROJECTS</h1>
+          <div className="updateproject__select-div">
+            <h2 className="updateproject__title-id">SELECT PROJECT</h2>
+            {Array.isArray(this.props.data) ? (
+              <select
+                className="updateproject__form-select"
+                closeMenuOnSelect={true}
+                onChange={this.handleProjectChange}
+              >
+                {this.props.data.map((project, index) => {
+                  return <option value={index}>{project.title}</option>;
+                })}
+              </select>
+            ) : (
+              ""
+            )}
+          </div>
+          <form
+            onChange={this.updateFormChange}
+            className="updateproject__form"
+            onSubmit={this.handleSubmit}
           >
-            {this.props.data.map((project, index) => {
-              return <option value={index}>{project.title}</option>;
-            })}
-          </select>
-        ) : (
-          ""
-        )}
-        <form
-          onChange={this.updateFormChange}
-          className="updateproject__form"
-          onSubmit={this.handleSubmit}
-        >
-          <label className="updateproject__form-label">Title</label>
-          <input
-            type="text"
-            name="title"
-            placeholder="Project Title"
-            className="updateproject__form-input"
-            value={this.state.title}
-          />
-          <label className="updateproject__form-label">Description</label>
-          <textarea
-            type="text"
-            name="description"
-            placeholder="Project Description"
-            className="updateproject__form-input-description"
-            value={this.state.description}
-          />
-          <label className="updateproject__form-label">Street Number</label>
-          <input
-            type="text"
-            name="streetNumber"
-            placeholder="Enter Street Number"
-            className="updateproject__form-input"
-            value={this.state.streetNumber}
-          />
-          <label className="updateproject__form-label">Street Name</label>
-          <input
-            type="text"
-            name="streetName"
-            placeholder="Enter Street Name"
-            className="updateproject__form-input"
-            value={this.state.streetName}
-          />
-          <label className="updateproject__form-label">City</label>
-          <input
-            type="text"
-            name="city"
-            placeholder="Enter City"
-            className="updateproject__form-input"
-            value={this.state.city}
-          />
-          <label className="updateproject__form-label">Province</label>
-          <input
-            type="text"
-            name="province"
-            placeholder="Enter Province"
-            className="updateproject__form-input"
-            value={this.state.province}
-          />
-          <label className="updateproject__form-label">Postal Code</label>
-          <input
-            type="text"
-            name="postalCode"
-            placeholder="Enter Postal Code"
-            className="updateproject__form-input"
-            value={this.state.postalCode}
-          />
-          <label className="updateproject__form-label">Start Date</label>
-          <input
-            type="date"
-            name="startDate"
-            className="updateproject__form-input"
-            value={this.state.startDate}
-          />
-          <label className="updateproject__form-label">End Date</label>
+            <div className="updateproject__form-div">
+              <div className="updateproject__form-div-left">
+                <label className="updateproject__form-label">
+                  Project Title
+                </label>
+                <input
+                  type="text"
+                  name="title"
+                  placeholder="Project Title"
+                  className="updateproject__form-input-title"
+                  value={this.state.title}
+                />
+                <label className="updateproject__form-label">
+                  Project Description
+                </label>
+                <textarea
+                  type="text"
+                  name="description"
+                  placeholder="Project Description"
+                  className="updateproject__form-input-description"
+                  value={this.state.description}
+                />
+              </div>
+              <div className="updateproject__form-div-right">
+                <label className="updateproject__form-label">
+                  Street Number
+                </label>
+                <input
+                  type="text"
+                  name="streetNumber"
+                  placeholder="Enter Street Number"
+                  className="updateproject__form-input"
+                  value={this.state.streetNumber}
+                />
+                <label className="updateproject__form-label">Street Name</label>
+                <input
+                  type="text"
+                  name="streetName"
+                  placeholder="Enter Street Name"
+                  className="updateproject__form-input"
+                  value={this.state.streetName}
+                />
+                <label className="updateproject__form-label">City</label>
+                <input
+                  type="text"
+                  name="city"
+                  placeholder="Enter City"
+                  className="updateproject__form-input"
+                  value={this.state.city}
+                />
+                <label className="updateproject__form-label">Province</label>
+                <input
+                  type="text"
+                  name="province"
+                  placeholder="Enter Province"
+                  className="updateproject__form-input"
+                  value={this.state.province}
+                />
+                <label className="updateproject__form-label">Postal Code</label>
+                <input
+                  type="text"
+                  name="postalCode"
+                  placeholder="Enter Postal Code"
+                  className="updateproject__form-input"
+                  value={this.state.postalCode}
+                />
+                <label className="updateproject__form-label">Start Date</label>
+                <input
+                  type="date"
+                  name="startDate"
+                  className="updateproject__form-input"
+                  value={this.state.startDate}
+                />
+                <label className="updateproject__form-label">End Date</label>
 
-          <input
-            type="date"
-            name="endDate"
-            className="updateproject__form-input"
-            value={this.state.endDate}
-          />
-          {/* <div className="updateproject__form-radio">
+                <input
+                  type="date"
+                  name="endDate"
+                  className="updateproject__form-input"
+                  value={this.state.endDate}
+                />
+                {/* <div className="updateproject__form-radio">
           <label for="contactChoice1">Active</label>
           <input
             type="radio"
@@ -173,12 +187,15 @@ class UpdateProject extends Component {
           <option value="newConstruction">NEW CONSTRUCTION</option>
           <option value="quote">QUOTE</option>
         </select> */}
-          <div className="updateproject__form-button-div">
-            <button className="updateproject__form-button" type="submit">
-              UPDATE
-            </button>
-          </div>
-        </form>
+              </div>
+            </div>
+            <div className="updateproject__form-button-div">
+              <button className="updateproject__form-button" type="submit">
+                UPDATE
+              </button>
+            </div>
+          </form>
+        </div>
       </section>
     );
   }

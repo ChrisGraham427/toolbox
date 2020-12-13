@@ -62,8 +62,8 @@ body {
 
 .navbar__logo {
   width: 240px;
+  height: 100%;
   margin-left: 3rem;
-  margin-bottom: 0.25rem;
 }
 
 .navbar__logo:hover {
@@ -98,10 +98,66 @@ body {
   margin: 2px;
   margin-right: 2rem;
   font-weight: bolder;
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 
 .navbar__button:hover {
+  background-color: #f5df4d;
+  color: #323232;
+  -webkit-transform: scale(1.125);
+          transform: scale(1.125);
+}
+
+.navbar__button-github {
+  width: 120px;
+  height: 28px;
+  background-color: #4c4c4c;
+  -webkit-box-shadow: 0 2px 4px #323232;
+          box-shadow: 0 2px 4px #323232;
+  color: #f5df4d;
+  border: none;
+  border-radius: 4px;
+  padding-left: 1rem;
+  margin: 2px;
+  margin-right: 2rem;
+  font-weight: bolder;
+  font-size: 0.875rem;
+  background-image: url("../assets/github.png");
+  background-repeat: no-repeat;
+  background-position-x: 10%;
+  background-position-y: 50%;
+  background-size: 20px 20px;
+}
+
+.navbar__button-github:hover {
+  background-color: #f5df4d;
+  color: #323232;
+  -webkit-transform: scale(1.125);
+          transform: scale(1.125);
+}
+
+.navbar__button-google {
+  width: 120px;
+  height: 28px;
+  background-color: #4c4c4c;
+  -webkit-box-shadow: 0 2px 4px #323232;
+          box-shadow: 0 2px 4px #323232;
+  color: #f5df4d;
+  border: none;
+  border-radius: 4px;
+  padding-left: 1.5rem;
+  margin: 2px;
+  margin-right: 2rem;
+  font-weight: bolder;
+  font-size: 0.875rem;
+  background-image: url("../assets/google.png");
+  background-repeat: no-repeat;
+  background-position-x: 10%;
+  background-position-y: 50%;
+  background-size: 20px 20px;
+}
+
+.navbar__button-google:hover {
   background-color: #f5df4d;
   color: #323232;
   -webkit-transform: scale(1.125);
@@ -156,6 +212,8 @@ body {
 
 .aside__logo-title {
   color: #939597;
+  -webkit-text-decoration-color: #f5df4d;
+          text-decoration-color: #f5df4d;
   font-size: 0.75rem;
   text-align: center;
   padding-bottom: 0.5rem;
@@ -215,19 +273,18 @@ body {
   color: #fafafa;
   width: 15rem;
   margin: 0.5rem;
-  -webkit-box-shadow: 0 2px 4px #f5df4d;
-          box-shadow: 0 2px 4px #f5df4d;
+  -webkit-box-shadow: 0 2px 4px #323232;
+          box-shadow: 0 2px 4px #323232;
 }
 
 .contact__card-button {
   height: 1.25rem;
-  width: 4rem;
-  border-radius: 0.25rem;
+  width: 1.25rem;
   border: none;
-  background-color: #f5df4d;
-  color: #323232;
-  margin-bottom: 0.5rem;
-  font-weight: bolder;
+  background: url("../assets/delete.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .contact__card-name {
@@ -290,9 +347,9 @@ body {
 }
 
 .project__container-list {
-  width: 100%;
-  height: 690px;
-  overflow: scroll;
+  width: 90%;
+  height: 560px;
+  overflow-y: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -324,8 +381,8 @@ body {
   color: #fafafa;
   width: 15rem;
   height: 535px;
-  -webkit-box-shadow: 0 2px 4px #f5df4d;
-          box-shadow: 0 2px 4px #f5df4d;
+  -webkit-box-shadow: 0 2px 4px #323232;
+          box-shadow: 0 2px 4px #323232;
   margin-top: 1rem;
   margin-right: 1rem;
 }
@@ -340,24 +397,35 @@ body {
 
 .project__card-description {
   font-size: 0.75rem;
-  border: 1px solid #939597;
+  border: none;
   border-radius: 4px;
+  -webkit-box-shadow: 0 2px 4px #323232;
+          box-shadow: 0 2px 4px #323232;
+  padding: 0.25rem;
   background-color: #4c4c4c;
   color: #fafafa;
   height: 170px;
   width: 90%;
   overflow: hidden;
+  margin-bottom: 1.5rem;
 }
 
 .project__card-button {
-  height: 1.25rem;
-  width: 4rem;
-  border-radius: 0.25rem;
+  height: 2rem;
+  width: 2rem;
   border: none;
-  background-color: #f5df4d;
-  color: #323232;
-  margin-bottom: 0.5rem;
-  font-weight: bolder;
+  background: url("../assets/delete.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-bottom: 0.25rem;
+}
+
+.project__card-button:hover {
+  color: #f5df4d;
+  background-color: #4c4c4c;
+  -webkit-transform: scale(1.125);
+          transform: scale(1.125);
 }
 
 .project__card-title {
@@ -365,6 +433,7 @@ body {
   padding-top: 1rem;
   text-align: center;
   width: 100%;
+  border-bottom: 4px solid #f5df4d;
   margin: 0 0 1rem 0;
 }
 
@@ -398,9 +467,11 @@ body {
 
 .project__card-timeline {
   margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
   font-size: 0.75rem;
-  border: 1px solid #323232;
+  border: none;
+  -webkit-box-shadow: 0 2px 4px #323232;
+          box-shadow: 0 2px 4px #323232;
   background-color: #4c4c4c;
   border-radius: 4px;
   padding: 3px;
@@ -408,6 +479,14 @@ body {
 
 .project__card-id {
   margin: 0.25rem 0 0 0;
+  font-size: 0.75rem;
+}
+
+.project__card-id-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 0.25rem;
 }
 
 .project__main {
@@ -432,10 +511,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #4c4c4c;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: url("https://images.unsplash.com/photo-1581093806997-124204d9fa9d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  background-image: url("../assets/fancy-deboss.png");
 }
 
 .project__main-left-column {
@@ -484,9 +560,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("https://images.unsplash.com/photo-1556761175-b413da4baf72?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url("../assets/fancy-deboss.png");
+  background-color: #4c4c4c;
 }
 
 .contact__main-left-column {
@@ -525,8 +600,8 @@ body {
   height: 535px;
   background-color: #939597;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0 2px 4px #f5df4d;
-          box-shadow: 0 2px 4px #f5df4d;
+  -webkit-box-shadow: 0 2px 4px #323232;
+          box-shadow: 0 2px 4px #323232;
   width: 400px;
 }
 
@@ -534,7 +609,7 @@ body {
   text-align: center;
   margin: 0;
   padding-top: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
 }
 
 .addcontact__label {
@@ -558,6 +633,7 @@ body {
 
 .addcontact__form-input {
   background-color: #4c4c4c;
+  color: #fafafa;
   border-radius: 0.25rem;
 }
 
@@ -596,6 +672,13 @@ body {
   font-weight: bolder;
 }
 
+.addcontact__form-button:hover {
+  color: #f5df4d;
+  background-color: #4c4c4c;
+  -webkit-transform: scale(1.125);
+          transform: scale(1.125);
+}
+
 .addcontact__form-button-div {
   margin-top: 1rem;
   display: -webkit-box;
@@ -629,15 +712,15 @@ body {
   width: 400px;
   background-color: #939597;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0 2px 4px #f5df4d;
-          box-shadow: 0 2px 4px #f5df4d;
+  -webkit-box-shadow: 0 2px 4px #323232;
+          box-shadow: 0 2px 4px #323232;
 }
 
 .addproject__title {
   text-align: center;
   margin: 0;
   padding-top: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
 }
 
 .addproject__form {
@@ -696,6 +779,26 @@ body {
   color: #fafafa;
 }
 
+.addproject__form-input-description::-webkit-input-placeholder {
+  color: #fafafa;
+  font-size: 0.625rem;
+}
+
+.addproject__form-input-description:-ms-input-placeholder {
+  color: #fafafa;
+  font-size: 0.625rem;
+}
+
+.addproject__form-input-description::-ms-input-placeholder {
+  color: #fafafa;
+  font-size: 0.625rem;
+}
+
+.addproject__form-input-description::placeholder {
+  color: #fafafa;
+  font-size: 0.625rem;
+}
+
 .addproject__form-button {
   padding: 0.5rem;
   border-radius: 0.25rem;
@@ -704,6 +807,13 @@ body {
   color: #323232;
   margin-bottom: 0.5rem;
   font-weight: bolder;
+}
+
+.addproject__form-button:hover {
+  color: #f5df4d;
+  background-color: #4c4c4c;
+  -webkit-transform: scale(1.125);
+          transform: scale(1.125);
 }
 
 .addproject__form-button-div {
@@ -752,8 +862,8 @@ body {
   height: 530px;
   background-color: #939597;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0 2px 4px #f5df4d;
-          box-shadow: 0 2px 4px #f5df4d;
+  -webkit-box-shadow: 0 2px 4px #323232;
+          box-shadow: 0 2px 4px #323232;
   width: 400px;
   margin-right: 4rem;
 }
@@ -762,7 +872,7 @@ body {
   text-align: center;
   margin: 0;
   padding-top: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
 }
 
 .addimage__form {
@@ -784,6 +894,7 @@ body {
 .addimage__form-input {
   width: 85%;
   background-color: #4c4c4c;
+  color: #fafafa;
   border-radius: 0.25rem;
 }
 
@@ -822,6 +933,13 @@ body {
   font-weight: bolder;
 }
 
+.addimage__form-button:hover {
+  color: #f5df4d;
+  background-color: #4c4c4c;
+  -webkit-transform: scale(1.125);
+          transform: scale(1.125);
+}
+
 .addimage__form-label {
   font-size: 0.75rem;
   padding: 0.5rem 0 0.125rem 0;
@@ -851,10 +969,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("https://images.unsplash.com/photo-1591783008804-ebcd7f783ebf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: url("../assets/fancy-deboss.png");
+  background-color: #4c4c4c;
 }
 
 .image__main-left-column {
@@ -897,31 +1013,43 @@ body {
   color: #fafafa;
   height: 15rem;
   width: 12rem;
-  margin: 1rem;
-  -webkit-box-shadow: 0 2px 4px #f5df4d;
-          box-shadow: 0 2px 4px #f5df4d;
+  margin: 0.5rem;
+  -webkit-box-shadow: 0 2px 4px #323232;
+          box-shadow: 0 2px 4px #323232;
 }
 
 .image__card-button {
-  height: 1.25rem;
-  width: 4rem;
-  border-radius: 0.25rem;
+  height: 1.5rem;
+  width: 1.5rem;
   border: none;
-  background-color: #f5df4d;
-  color: #323232;
-  margin-bottom: 0.5rem;
-  font-weight: bolder;
+  background: url("../assets/delete.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.image__card-button:hover {
+  color: #f5df4d;
+  background-color: #4c4c4c;
+  -webkit-transform: scale(1.125);
+          transform: scale(1.125);
 }
 
 .image__card-description {
   font-size: 1rem;
   overflow: hidden;
-  margin-bottom: 0;
+  margin: 0.25rem;
 }
 
 .image__card-image {
-  width: 190px;
+  width: 100%;
+  height: auto;
   border-radius: 0.25rem;
+}
+
+.image__card-image:active {
+  -webkit-transform: scale(1.75);
+          transform: scale(1.75);
 }
 
 .image__card-projecttitle {
@@ -962,6 +1090,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-image: url("../assets/axiom-pattern.png");
   background-color: #f5df4d;
 }
 
@@ -1106,8 +1235,8 @@ body {
   border-radius: 0.5rem;
   width: 60%;
   height: 535px;
-  -webkit-box-shadow: 0 2px 4px #f5df4d;
-          box-shadow: 0 2px 4px #f5df4d;
+  -webkit-box-shadow: 0 2px 4px #323232;
+          box-shadow: 0 2px 4px #323232;
 }
 
 .image__container-list {
@@ -1122,7 +1251,7 @@ body {
       flex-wrap: wrap;
   width: 90%;
   height: 560px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .image__container-title {
@@ -1169,7 +1298,7 @@ body {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  overflow: scroll;
+  overflow-y: scroll;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1194,8 +1323,8 @@ body {
   height: 535px;
   background-color: #939597;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0 2px 4px #f5df4d;
-          box-shadow: 0 2px 4px #f5df4d;
+  -webkit-box-shadow: 0 2px 4px #323232;
+          box-shadow: 0 2px 4px #323232;
   padding: 0 0.5rem;
   width: 400px;
 }
@@ -1227,6 +1356,7 @@ body {
 }
 
 .addtask__form-input {
+  color: #fafafa;
   background-color: #4c4c4c;
   border-radius: 0.25rem;
 }
@@ -1266,6 +1396,13 @@ body {
   font-weight: bolder;
 }
 
+.addtask__form-button:hover {
+  color: #f5df4d;
+  background-color: #4c4c4c;
+  -webkit-transform: scale(1.125);
+          transform: scale(1.125);
+}
+
 .addtask__form-button-div {
   margin-top: 1rem;
   display: -webkit-box;
@@ -1282,6 +1419,7 @@ body {
 }
 
 .addtask__form-textarea {
+  color: #fafafa;
   height: 120px;
   border-radius: 0.25rem;
   background-color: #4c4c4c;
@@ -1308,7 +1446,7 @@ body {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  overflow: scroll;
+  overflow-y: scroll;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1340,31 +1478,47 @@ body {
   width: 15rem;
   height: 15rem;
   margin: 0.5rem;
-  -webkit-box-shadow: 0 2px 4px #f5df4d;
-          box-shadow: 0 2px 4px #f5df4d;
+  -webkit-box-shadow: 0 2px 4px #323232;
+          box-shadow: 0 2px 4px #323232;
 }
 
 .task__card-button {
-  height: 1.25rem;
-  width: 4rem;
+  width: 30px;
+  height: 30px;
   border-radius: 0.25rem;
   border: none;
   background-color: #f5df4d;
   color: #323232;
   margin-bottom: 0.5rem;
   font-weight: bolder;
+  background: url("../assets/checked.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.task__card-button:hover {
+  color: #f5df4d;
+  -webkit-transform: scale(1.125);
+          transform: scale(1.125);
 }
 
 .task__card-name {
   font-size: 1rem;
   margin-bottom: 0;
   margin-top: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #f5df4d;
+  color: #4c4c4c;
+  padding: 0.25rem;
 }
 
 .task__card-description {
+  padding: 0.5rem;
   background-color: #4c4c4c;
   border-radius: 0.25rem;
   width: 90%;
+  font-size: 0.875rem;
 }
 
 .task__main {
@@ -1391,9 +1545,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("https://images.unsplash.com/photo-1556761175-b413da4baf72?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #4c4c4c;
+  background-image: url("../assets/fancy-deboss.png");
 }
 
 .task__main-left-column {
@@ -1416,6 +1569,8 @@ body {
 }
 
 .updateproject {
+  background-image: url("../assets/fancy-deboss.png");
+  background-color: #4c4c4c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1429,25 +1584,49 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #fafafa;
+}
+
+.updateproject__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #4c4c4c;
   height: 82.5vh;
-  background-color: #939597;
-  border-radius: 0.5rem;
-  -webkit-box-shadow: 0 2px 4px #f5df4d;
-          box-shadow: 0 2px 4px #f5df4d;
+  width: 70vw;
+  background-color: #4c4c4c;
+  -webkit-box-shadow: 0 2px 4px #323232;
+          box-shadow: 0 2px 4px #323232;
 }
 
 .updateproject__title {
+  color: #fafafa;
   text-align: center;
   margin: 0;
-  padding-top: 0.5rem;
-  font-size: 1.25rem;
+  padding-top: 1rem;
+  font-size: 2.25rem;
+}
+
+.updateproject__title-id {
+  font-size: 1rem;
+  color: #fafafa;
+  padding-top: 4px;
+  margin: 0 1rem 0 0;
 }
 
 .updateproject__form {
+  width: 85%;
   padding-top: 0.5rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin-left: 7.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1458,10 +1637,13 @@ body {
 }
 
 .updateproject__form-input {
-  width: 500px;
-  background-color: #4c4c4c;
+  width: 100%;
+  background-color: #939597;
   color: #fafafa;
   border-radius: 0.25rem;
+  -webkit-box-shadow: 0 1px 2px #323232;
+          box-shadow: 0 1px 2px #323232;
+  font-size: 1.125rem;
 }
 
 .updateproject__form-input::-webkit-input-placeholder {
@@ -1493,21 +1675,47 @@ body {
 }
 
 .updateproject__form-input-description {
-  height: 64px;
-  width: 500px;
-  background-color: #4c4c4c;
+  height: 90%;
+  width: 80%;
+  margin-left: 10%;
+  background-color: #939597;
   text-overflow: auto;
   color: #fafafa;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 1px 2px #323232;
+          box-shadow: 0 1px 2px #323232;
+  font-size: 1.125rem;
+}
+
+.updateproject__form-input-title {
+  text-align: center;
+  margin-left: 37.5%;
+  margin-bottom: 5%;
+  width: 25%;
+  background-color: #939597;
+  color: #fafafa;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 1px 2px #323232;
+          box-shadow: 0 1px 2px #323232;
+  font-size: 1rem;
 }
 
 .updateproject__form-button {
-  padding: 0.5rem;
+  margin-right: 10%;
+  padding: 0.5rem 1.5rem;
   border-radius: 0.25rem;
   border: none;
   background-color: #f5df4d;
   color: #323232;
   margin-bottom: 0.5rem;
   font-weight: bolder;
+}
+
+.updateproject__form-button:hover {
+  color: #f5df4d;
+  background-color: #939597;
+  -webkit-transform: scale(1.125);
+          transform: scale(1.125);
 }
 
 .updateproject__form-button-div {
@@ -1521,8 +1729,40 @@ body {
 }
 
 .updateproject__form-label {
-  font-size: 0.75rem;
-  padding: 0.5rem 0 0.125rem 0;
+  text-align: center;
+  color: #fafafa;
+  font-size: 0.875rem;
+  padding: 0.5rem 0 0.25rem 0;
+}
+
+.updateproject__form-div {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.updateproject__form-div-left {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 1rem;
+}
+
+.updateproject__form-div-right {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .updateproject__form-radio {
@@ -1535,8 +1775,165 @@ body {
 }
 
 .updateproject__form-select {
+  font-size: 0.75rem;
+  height: 1.5rem;
+  border: 1px solid #fafafa;
   background-color: #4c4c4c;
   color: #fafafa;
+}
+
+.updateproject__select-div {
+  border-bottom: 6px solid #f5df4d;
+  border-top: 6px solid #f5df4d;
+  padding: 0.5rem 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project__cardid {
+  color: #fafafa;
+  margin-left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 35vw;
+  height: 82vh;
+  border-right: 12px solid #f5df4d;
+}
+
+.project__cardid-title {
+  margin: 1px;
+  font-size: 2.75rem;
+  text-align: center;
+}
+
+.project__cardid-description {
+  padding: 0.5rem;
+  background-color: #939597;
+  border-radius: 0.5rem;
+  color: #fafafa;
+  font-size: 1.25rem;
+  height: 12rem;
+  margin-right: 1rem;
+  overflow: hidden;
+}
+
+.project__cardid-number {
+  margin: 0;
+}
+
+.project__cardid-id-div {
+  margin: 0.25rem;
+}
+
+.project__cardid-projectid-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project__cardid-projectid-div-sub {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.project__cardid-address-container {
+  width: 15rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: #4c4c4c;
+}
+
+.project__cardid-address-title {
+  font-size: 0.875rem;
+  margin: 0;
+  padding: 0.5rem 0 0.5rem 0;
+  border-bottom: 2px solid #f5df4d;
+}
+
+.project__cardid-item-date {
+  font-size: 0.875rem;
+  margin: 0.25rem 0 0.25rem 0;
+  padding: 0.25rem;
+  color: #323232;
+  font-weight: bold;
+  border: none;
+  background-color: #f5df4d;
+  border-radius: 0.25rem;
+}
+
+.project__cardid-item-address {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.project__cardid-item-address-yellow {
+  font-size: 0.875rem;
+  background-color: #939597;
+  padding: 0.5rem;
+  margin: 0;
+  border-bottom: 2px solid #f5df4d;
+}
+
+.projectById__container-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.projectid__main {
+  background-color: #4c4c4c;
+  background-image: url("../assets/fancy-deboss.png");
+}
+
+.projectid__main-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.rbc-event-content {
+  background-color: #939597;
+  color: #fafafa;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rbc-day-bg {
+  background-color: #4c4c4c;
+}
+
+.rbc-today {
+  background-color: #939597;
 }
 
 .mainbody {

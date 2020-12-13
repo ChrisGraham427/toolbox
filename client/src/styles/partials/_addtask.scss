@@ -7,7 +7,7 @@
   height: 535px;
   background-color: $backgroundgrey;
   border-radius: 0.5rem;
-  box-shadow: 0 2px 4px $mainyellow;
+  box-shadow: 0 2px 4px $mainblack;
   padding: 0 0.5rem;
   width: 400px;
   &__title {
@@ -28,6 +28,7 @@
     width: 350px;
   }
   &__form-input {
+    color: $mainwhite;
     background-color: $maingrey;
     border-radius: 0.25rem;
   }
@@ -47,6 +48,11 @@
     margin-bottom: 0.5rem;
     font-weight: bolder;
   }
+  &__form-button:hover {
+    color: $mainyellow;
+    background-color: $maingrey;
+    transform: scale(1.125);
+  }
   &__form-button-div {
     margin-top: 1rem;
     display: flex;
@@ -57,6 +63,7 @@
     padding: 0.5rem 0 0.125rem 0;
   }
   &__form-textarea {
+    color: $mainwhite;
     height: 120px;
     border-radius: 0.25rem;
     background-color: $maingrey;

@@ -18,9 +18,7 @@ export default function Contact(props) {
             props.submitDelete(event, id);
           }}
         >
-          <button type="submit" className="project__card-button">
-            DELETE
-          </button>
+          <button type="submit" className="contact__card-button"></button>
         </form>
       </section>
     </li>

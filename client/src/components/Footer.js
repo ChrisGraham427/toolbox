@@ -22,7 +22,7 @@ function Footer() {
       </p>
       <Link to="/">
         <img
-          src={process.env.PUBLIC_URL + "/scoped-logo.png"}
+          src={process.env.PUBLIC_URL + "/Atrezi-logo.png"}
           className="bottomnav__title"
         />
       </Link>

@@ -11,9 +11,7 @@ export default function Task(props) {
             props.submitDelete(event, id);
           }}
         >
-          <button type="submit" className="task__card-button">
-            DELETE
-          </button>
+          <button type="submit" className="task__card-button"></button>
         </form>
       </section>
     </li>

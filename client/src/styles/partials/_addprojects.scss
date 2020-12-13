@@ -8,13 +8,13 @@
   // height: 535px;
   background-color: $backgroundgrey;
   border-radius: 0.5rem;
-  box-shadow: 0 2px 4px $mainyellow;
+  box-shadow: 0 2px 4px $mainblack;
 
   &__title {
     text-align: center;
     margin: 0;
     padding-top: 0.5rem;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
   }
   &__form {
     padding-top: 0.5rem;
@@ -42,6 +42,10 @@
     text-overflow: auto;
     color: $mainwhite;
   }
+  &__form-input-description::placeholder {
+    color: $mainwhite;
+    font-size: 0.625rem;
+  }
   &__form-button {
     padding: 0.5rem;
     border-radius: 0.25rem;
@@ -50,6 +54,11 @@
     color: $mainblack;
     margin-bottom: 0.5rem;
     font-weight: bolder;
+  }
+  &__form-button:hover {
+    color: $mainyellow;
+    background-color: $maingrey;
+    transform: scale(1.125);
   }
   &__form-button-div {
     margin-top: 1rem;

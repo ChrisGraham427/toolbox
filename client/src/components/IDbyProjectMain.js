@@ -1,13 +1,11 @@
-import Header from "./Header";
-import Footer from "./Footer";
 import ProjectById from "./ProjectById";
 
 export default function IDbyProject(props) {
   console.log(props);
   return (
-    <section className="project__main">
-      <section className="project__main-column">
-        <div className="project__main-right-column">
+    <section className="projectid__main">
+      <section className="projectid__main-column">
+        <div className="projectid__main-left-column">
           <ProjectById
             data={props.data}
             currentProjectId={props.currentProjectId}

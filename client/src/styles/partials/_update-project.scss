@@ -1,33 +1,49 @@
 .updateproject {
+  background-image: url("../assets/fancy-deboss.png");
+  background-color: $maingrey;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  color: $mainwhite;
-  height: 82.5vh;
+  &__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: $maingrey;
+    height: 82.5vh;
+    width: 70vw;
+    background-color: $maingrey;
 
-  background-color: $backgroundgrey;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px $mainyellow;
-
+    box-shadow: 0 2px 4px $mainblack;
+  }
   &__title {
+    color: $mainwhite;
     text-align: center;
     margin: 0;
-    padding-top: 0.5rem;
-    font-size: 1.25rem;
+    padding-top: 1rem;
+    font-size: 2.25rem;
+  }
+  &__title-id {
+    font-size: 1rem;
+    color: $mainwhite;
+    padding-top: 4px;
+    margin: 0 1rem 0 0;
   }
   &__form {
+    width: 85%;
     padding-top: 0.5rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-left: 7.5%;
     display: flex;
     flex-direction: column;
   }
   &__form-input {
-    width: 500px;
-    background-color: $maingrey;
+    width: 100%;
+    background-color: $backgroundgrey;
     color: $mainwhite;
     border-radius: 0.25rem;
+    box-shadow: 0 1px 2px $mainblack;
+    font-size: 1.125rem;
   }
   &__form-input::placeholder {
     color: $mainwhite;
@@ -36,14 +52,31 @@
     padding-right: 0.5rem;
   }
   &__form-input-description {
-    height: 64px;
-    width: 500px;
-    background-color: $maingrey;
+    height: 90%;
+    width: 80%;
+    margin-left: 10%;
+
+    background-color: $backgroundgrey;
     text-overflow: auto;
     color: $mainwhite;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 2px $mainblack;
+    font-size: 1.125rem;
+  }
+  &__form-input-title {
+    text-align: center;
+    margin-left: 37.5%;
+    margin-bottom: 5%;
+    width: 25%;
+    background-color: $backgroundgrey;
+    color: $mainwhite;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 2px $mainblack;
+    font-size: 1rem;
   }
   &__form-button {
-    padding: 0.5rem;
+    margin-right: 10%;
+    padding: 0.5rem 1.5rem;
     border-radius: 0.25rem;
     border: none;
     background-color: $mainyellow;
@@ -51,14 +84,40 @@
     margin-bottom: 0.5rem;
     font-weight: bolder;
   }
+  &__form-button:hover {
+    color: $mainyellow;
+    background-color: $backgroundgrey;
+    transform: scale(1.125);
+  }
   &__form-button-div {
     margin-top: 1rem;
     display: flex;
     justify-content: space-evenly;
   }
   &__form-label {
-    font-size: 0.75rem;
-    padding: 0.5rem 0 0.125rem 0;
+    text-align: center;
+    color: $mainwhite;
+    font-size: 0.875rem;
+    padding: 0.5rem 0 0.25rem 0;
+  }
+  &__form-div {
+    width: 90%;
+
+    display: flex;
+  }
+
+  &__form-div-left {
+    width: 70%;
+
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+  }
+
+  &__form-div-right {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
   }
 
   &__form-radio {
@@ -69,7 +128,18 @@
     color: $mainyellow;
   }
   &__form-select {
+    font-size: 0.75rem;
+    height: 1.5rem;
+    border: 1px solid $mainwhite;
     background-color: $maingrey;
     color: $mainwhite;
+  }
+  &__select-div {
+    border-bottom: 6px solid $mainyellow;
+    border-top: 6px solid $mainyellow;
+    padding: 0.5rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }

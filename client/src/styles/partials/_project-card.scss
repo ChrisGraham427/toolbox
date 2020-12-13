@@ -8,7 +8,7 @@
   color: $mainwhite;
   width: 15rem;
   height: 535px;
-  box-shadow: 0 2px 4px $mainyellow;
+  box-shadow: 0 2px 4px $mainblack;
   margin-top: 1rem;
   margin-right: 1rem;
   &-item {
@@ -19,29 +19,38 @@
   }
   &-description {
     font-size: 0.75rem;
-    border: 1px solid $backgroundgrey;
+    border: none;
     border-radius: 4px;
+    box-shadow: 0 2px 4px $mainblack;
+    padding: 0.25rem;
     background-color: $maingrey;
     color: $mainwhite;
     height: 170px;
     width: 90%;
     overflow: hidden;
+    margin-bottom: 1.5rem;
   }
   &-button {
-    height: 1.25rem;
-    width: 4rem;
-    border-radius: 0.25rem;
+    height: 2rem;
+    width: 2rem;
     border: none;
-    background-color: $mainyellow;
-    color: $mainblack;
-    margin-bottom: 0.5rem;
-    font-weight: bolder;
+    background: url("../assets/delete.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 0.25rem;
+  }
+  &-button:hover {
+    color: $mainyellow;
+    background-color: $maingrey;
+    transform: scale(1.125);
   }
   &-title {
     font-size: 1.125rem;
     padding-top: 1rem;
     text-align: center;
     width: 100%;
+    border-bottom: 4px solid $mainyellow;
     margin: 0 0 1rem 0;
   }
   &-address-container {
@@ -69,14 +78,20 @@
   }
   &-timeline {
     margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
     font-size: 0.75rem;
-    border: 1px solid $mainblack;
+    border: none;
+    box-shadow: 0 2px 4px $mainblack;
     background-color: $maingrey;
     border-radius: 4px;
     padding: 3px;
   }
   &-id {
     margin: 0.25rem 0 0 0;
+    font-size: 0.75rem;
+  }
+  &-id-div {
+    display: flex;
+    padding-bottom: 0.25rem;
   }
 }

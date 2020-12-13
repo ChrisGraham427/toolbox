@@ -7,11 +7,14 @@ function Header(props) {
     <header className="navbar">
       <Link to="/">
         <img
-          src={process.env.PUBLIC_URL + "/scoped-logo.png"}
+          src={process.env.PUBLIC_URL + "/Atrezi-logo.png"}
           className="navbar__logo"
         />
       </Link>
       <div className="navbar__links">
+        <Link to="/project">
+          <button className="navbar__button">CREATE</button>
+        </Link>
         <form
           onSubmit={(event) => {
             props.handleProjectbyID(event, (id) => {
@@ -29,20 +32,19 @@ function Header(props) {
             PROJECT
           </button>
         </form>
+
         <Link to="/update">
           <button className="navbar__button">UPDATE</button>
         </Link>
-        <Link to="/project">
-          <button className="navbar__button">CREATE</button>
-        </Link>
+
         <Link to="/schedule">
           <button className="navbar__button">CALENDAR</button>
         </Link>
         <Link to="/login">
-          <button className="navbar__button">LOGIN</button>
+          <button className="navbar__button-github">LOGIN</button>
         </Link>
         <Link to="/auth/google">
-          <button className="navbar__button">GOOGLE</button>
+          <button className="navbar__button-google">LOGIN</button>
         </Link>
       </div>
     </header>

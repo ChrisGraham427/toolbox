@@ -3,7 +3,7 @@ const API_URL = "http://localhost:8080";
 export default function AddProject(props) {
   return (
     <section className="addproject">
-      <h1 className="addproject__title">MANAGE PROJECTS</h1>
+      <h1 className="addproject__title">CREATE NEW PROJECT</h1>
       <form className="addproject__form" onSubmit={props.handleSubmit}>
         <label className="addproject__form-label">Title</label>
         <input

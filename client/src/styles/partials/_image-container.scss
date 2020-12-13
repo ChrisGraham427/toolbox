@@ -7,7 +7,7 @@
   border-radius: 0.5rem;
   width: 60%;
   height: 535px;
-  box-shadow: 0 2px 4px $mainyellow;
+  box-shadow: 0 2px 4px $mainblack;
   &-list {
     border: 1px solid $maingrey;
     padding: 0;
@@ -17,7 +17,7 @@
     flex-wrap: wrap;
     width: 90%;
     height: 560px;
-    overflow: scroll;
+    overflow-y: scroll;
   }
   &-title {
     padding-top: 0.5rem;

@@ -3,7 +3,7 @@ const API_URL = "http://localhost:8080";
 export default function AddContact(props) {
   return (
     <section className="addcontact">
-      <h1 className="addcontact__title">MANAGE CONTACTS</h1>
+      <h1 className="addcontact__title">CREATE CONTACTS</h1>
       <form onSubmit={props.handleSubmit} className="addcontact__form">
         <label className="addcontact__form-label">Name</label>
         <input

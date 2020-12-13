@@ -31,17 +31,17 @@ export default function Project(props) {
         <p className="project__card-item">Start Date: {startDate}</p>
         <p className="project__card-item">Est. End Date: {endDate}</p>
       </div>
+      <div className="project__card-id-div">
+        <p className="project__card-id">PROJECT #</p>
+        <p className="project__card-id">{id}</p>
+      </div>
       <form
         onSubmit={(event) => {
           props.submitDelete(event, id);
         }}
       >
-        <button type="submit" className="project__card-button">
-          DELETE
-        </button>
+        <button type="submit" className="project__card-button"></button>
       </form>
-      <h3 className="project__card-id">PROJECT #</h3>
-      <p className="project__card-id">{id}</p>
     </li>
   );
 }

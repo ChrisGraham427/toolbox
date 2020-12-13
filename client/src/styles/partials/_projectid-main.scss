@@ -1,0 +1,8 @@
+.projectid__main {
+  background-color: $maingrey;
+  background-image: url("../assets/fancy-deboss.png");
+  &-column {
+    display: flex;
+    flex-direction: column;
+  }
+}

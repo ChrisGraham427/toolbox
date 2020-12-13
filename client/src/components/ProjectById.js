@@ -1,12 +1,12 @@
-import Project from "./Project";
+import ProjectCardById from "./ProjectCardById";
 
 export default function ProjectById(props) {
   const projectList = props.data;
   console.log("projectList", projectList);
   console.log("currentProjectId", typeof props.currentProjectId);
   return (
-    <section className="project__container">
-      <ul className="project__container-list">
+    <section className="projectById__container">
+      <ul className="projectById__container-list">
         {projectList.length &&
           props.currentProjectId &&
           projectList
@@ -15,7 +15,7 @@ export default function ProjectById(props) {
             })
             .map((project) => {
               return (
-                <Project
+                <ProjectCardById
                   key={project.id}
                   currentProjectId={props.currentProjectId}
                   data={project}
