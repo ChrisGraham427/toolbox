@@ -1,16 +1,27 @@
 export default function ContactCardById(props) {
-  const { title, source, alt, project_id } = props.contactData;
+  console.log("PROPS CHECK", props.contact);
+  const {
+    phone,
+    email,
+    name,
+    company,
+    position,
+    project_id,
+    id,
+  } = props.contact;
   return (
-    <li className="project__cardid" key={project_id}>
-      <div className="project__cardid-projectid-div">
-        <h2 className="project__cardid-title">{source}</h2>
+    <li key={project_id}>
+      <div>
+        <h2>{props.name}</h2>
         <div className="project__cardid-projectid-div-sub"></div>
       </div>
-      <p className="project__cardid-description">{alt}</p>
+      <p className="project__cardid-description">{company}</p>
       <div className="project__cardid-timeline">
-        <p className="project__cardid-item-date"> {title}</p>
+        <p className="project__cardid-item-date"> {position}</p>
+        <p className="project__cardid-item-date"> {phone}</p>
+        <p className="project__cardid-item-date"> {email}</p>
       </div>
-      <div className="project__card-id-div"></div>
+      <div className="project__card-id-div">{id}</div>
     </li>
   );
 }

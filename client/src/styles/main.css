@@ -6,11 +6,6 @@ body {
   font-family: "Rubik";
 }
 
-#file-upload-button {
-  background-color: #4c4c4c;
-  color: #fafafa;
-}
-
 @font-face {
   font-family: "Rubik";
   src: url("../assets/Rubik-Light.woff2") format("woff2"), url("../assets/Rubik-Light.woff") format("woff");
@@ -1880,8 +1875,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 35vw;
-  height: 82vh;
+  width: 100vw;
+  height: 45vh;
   border-right: 12px solid #f5df4d;
 }
 
@@ -1897,7 +1892,7 @@ body {
   border-radius: 0.5rem;
   color: #fafafa;
   font-size: 1.25rem;
-  height: 12rem;
+  height: 9rem;
   margin-right: 1rem;
   overflow: hidden;
 }
@@ -1980,6 +1975,7 @@ body {
 }
 
 .projectid__main-column {
+  border: 1px solid black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1987,6 +1983,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.projectid__main-right-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .rbc-event-content {
@@ -2005,9 +2010,21 @@ body {
   background-color: #939597;
 }
 
+.imageById__container-list {
+  width: 15%;
+}
+
+.image__cardid-image {
+  width: 120px;
+  height: 120px;
+}
+
+.contactById__container-list {
+  list-style-type: none;
+}
+
 .mainbody {
   background-color: #4c4c4c;
-  margin-top: -5px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

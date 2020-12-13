@@ -32,6 +32,8 @@ class App extends Component {
     selectedFile: "",
     currentProject: "",
     currentContact: "",
+    currentTask: "",
+    currentImage: "",
     events: [
       {
         start: moment().toDate(),
@@ -116,8 +118,15 @@ class App extends Component {
       {
         currentProject: event.target.projectId.value,
         currentContact: event.target.projectId.value,
+        currentTask: event.target.projectId.value,
+        currentImage: event.target.projectId.value,
       },
-      callback(this.state.currentProject)
+      callback(
+        this.state.currentProject,
+        this.state.currentContact,
+        this.state.currentTask,
+        this.state.currentImage
+      )
     );
   };
   //----------------------POST PROJECT
@@ -402,8 +411,12 @@ class App extends Component {
             path="/project/:id"
             render={() => (
               <IDbyProject
+                currentTaskId={this.state.currentTask}
+                taskData={this.state.task}
+                imageData={this.state.image}
                 contactData={this.state.contact}
                 data={this.state.project}
+                currentImageId={this.state.currentImage}
                 currentProjectId={this.state.currentProject}
                 currentContactId={this.state.currentContact}
               />

@@ -27,8 +27,10 @@
 @import "./partials/projectById";
 @import "./partials/projectid-main";
 @import "./partials/calendar";
+@import "./partials/imageById";
+@import "./partials/contactById";
 .mainbody {
   background-color: $maingrey;
-  margin-top: -5px;
+
   align-items: center;
 }

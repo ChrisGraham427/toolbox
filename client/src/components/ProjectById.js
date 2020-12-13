@@ -1,5 +1,5 @@
 import ProjectCardById from "./ProjectCardById";
-import ContactById from "./ContactById";
+
 export default function ProjectById(props) {
   const projectList = props.data;
   console.log("projectList", projectList);
@@ -21,7 +21,6 @@ export default function ProjectById(props) {
                     currentProjectId={props.currentProjectId}
                     data={project}
                   />
-                  <ContactById currentContactId={props.currentContactId} />
                 </section>
               );
             })}

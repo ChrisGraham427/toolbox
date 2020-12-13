@@ -1,5 +1,7 @@
 import ProjectById from "./ProjectById";
-
+import ContactById from "./ContactById";
+import TaskById from "./TaskById";
+import ImageById from "./ImageById";
 export default function IDbyProject(props) {
   console.log(props);
   return (
@@ -7,11 +9,26 @@ export default function IDbyProject(props) {
       <section className="projectid__main-column">
         <div className="projectid__main-left-column">
           <ProjectById
-            contactData={props.contactData}
             data={props.data}
-            currentContactId={props.currentContactId}
             currentProjectId={props.currentProjectId}
             submitDelete={props.submitDelete}
+          />
+        </div>
+        <div className="projectid__main-right-column">
+          <ContactById
+            className="projectid__main-right-column-contact"
+            contactData={props.contactData}
+            currentContactId={props.currentContactId}
+          />
+
+          <TaskById
+            taskData={props.taskData}
+            currentTaskId={props.currentTaskId}
+          />
+
+          <ImageById
+            imageData={props.imageData}
+            currentImageId={props.currentImageId}
           />
         </div>
       </section>

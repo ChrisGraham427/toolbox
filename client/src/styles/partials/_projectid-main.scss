@@ -2,7 +2,12 @@
   background-color: $maingrey;
   background-image: url("../assets/fancy-deboss.png");
   &-column {
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
+  }
+  &-right-column {
+    display: flex;
+    justify-content: space-evenly;
   }
 }

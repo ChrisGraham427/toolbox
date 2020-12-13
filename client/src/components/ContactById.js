@@ -1,24 +1,31 @@
-import ContactCardById from "./ContactCardById";
-
 export default function ContactById(props) {
-  const contactList = props.data;
+  const contactList = props.contactData;
   console.log("contactList", contactList);
   return (
     <section className="contactById__container">
       <ul className="contactById__container-list">
-        {contactList &&
+        {contactList.length &&
           props.currentContactId &&
           contactList
             .filter((contact) => {
-              return contact.id === parseInt(props.currentContactId);
+              return contact.project_id === parseInt(props.currentContactId);
             })
             .map((contact) => {
+              console.log(contact);
               return (
-                <ContactCardById
-                  key={contact.id}
-                  currentContactId={props.currentContactId}
-                  data={contact}
-                />
+                <li className="contact_cardid" key={contact.project_id}>
+                  <div>
+                    <h2>{contact.name}</h2>
+                    <div></div>
+                  </div>
+                  <p>{contact.company}</p>
+                  <div>
+                    <p> {contact.position}</p>
+                    <p> {contact.phone}</p>
+                    <p> {contact.email}</p>
+                  </div>
+                  <div>{contact.id}</div>
+                </li>
               );
             })}
       </ul>

@@ -6,8 +6,8 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 35vw;
-  height: 82vh;
+  width: 100vw;
+  height: 45vh;
   border-right: 12px solid $mainyellow;
   &-title {
     margin: 1px;
@@ -20,7 +20,7 @@
     border-radius: 0.5rem;
     color: $mainwhite;
     font-size: 1.25rem;
-    height: 12rem;
+    height: 9rem;
     margin-right: 1rem;
     overflow: hidden;
   }
