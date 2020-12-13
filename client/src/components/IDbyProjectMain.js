@@ -7,7 +7,9 @@ export default function IDbyProject(props) {
       <section className="projectid__main-column">
         <div className="projectid__main-left-column">
           <ProjectById
+            contactData={props.contactData}
             data={props.data}
+            currentContactId={props.currentContactId}
             currentProjectId={props.currentProjectId}
             submitDelete={props.submitDelete}
           />

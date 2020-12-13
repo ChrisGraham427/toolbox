@@ -2,12 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  text-decoration-color: $maingrey;
   border-radius: 0.5rem;
   background-color: $backgroundgrey;
   color: $mainwhite;
   width: 15rem;
-  height: 535px;
+  height: 17.5rem;
   box-shadow: 0 2px 4px $mainblack;
   margin-top: 1rem;
   margin-right: 1rem;
@@ -47,11 +47,13 @@
   }
   &-title {
     font-size: 1.125rem;
-    padding-top: 1rem;
+    padding: 0.25rem;
     text-align: center;
-    width: 100%;
-    border-bottom: 4px solid $mainyellow;
-    margin: 0 0 1rem 0;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px $mainblack;
+    background-color: $mainyellow;
+    color: $maingrey;
+    margin: 1rem 0 1rem 0;
   }
   &-address-container {
     text-align: center;
@@ -70,7 +72,7 @@
   }
   &-address-title {
     color: $mainwhite;
-    font-size: 1rem;
+    font-size: 0.75rem;
     margin: 0;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -78,7 +80,7 @@
   }
   &-timeline {
     margin-top: 0.75rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.25rem;
     font-size: 0.75rem;
     border: none;
     box-shadow: 0 2px 4px $mainblack;

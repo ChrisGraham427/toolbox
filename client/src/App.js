@@ -31,6 +31,7 @@ class App extends Component {
     description: "",
     selectedFile: "",
     currentProject: "",
+    currentContact: "",
     events: [
       {
         start: moment().toDate(),
@@ -47,7 +48,6 @@ class App extends Component {
     this.getContacts();
     this.getImages();
     this.getTasks();
-    // this.getProjectbyID();
   }
   //=============SCHEDULER
 
@@ -107,26 +107,16 @@ class App extends Component {
       });
   }
 
-  getProjectbyID() {
-    axios
-      .get(`${API_URL}/project/:id`)
-      .then((res) => {
-        console.log("message:LOOK HERE", res.data);
-        this.setState({
-          project: res.data,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
   //------------------------------------
   handleProjectbyID = (event, callback) => {
     event.preventDefault();
 
     console.log("IDEVENT", event.target.projectId);
     this.setState(
-      { currentProject: event.target.projectId.value },
+      {
+        currentProject: event.target.projectId.value,
+        currentContact: event.target.projectId.value,
+      },
       callback(this.state.currentProject)
     );
   };
@@ -412,8 +402,10 @@ class App extends Component {
             path="/project/:id"
             render={() => (
               <IDbyProject
+                contactData={this.state.contact}
                 data={this.state.project}
                 currentProjectId={this.state.currentProject}
+                currentContactId={this.state.currentContact}
               />
             )}
             exact

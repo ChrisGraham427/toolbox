@@ -24,10 +24,39 @@
     align-items: center;
     width: 350px;
   }
+  &__form-input-id {
+    width: 35%;
+    background-color: $maingrey;
+    color: $mainwhite;
+    border-radius: 0.25rem;
+  }
+  &__form-input-id::placeholder {
+    color: $mainwhite;
+    font-size: 0.625rem;
+    padding-left: 0.5rem;
+  }
   &__form-input {
     width: 85%;
     background-color: $maingrey;
     color: $mainwhite;
+    border-radius: 0.25rem;
+  }
+  &__form-input-file {
+    width: 87%;
+    background-color: $maingrey;
+    border-radius: 0.25rem;
+  }
+  &__form-input-file::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  &__form-input-file::before {
+    content: "Select Image File";
+
+    background-color: $mainyellow;
+    border: none;
+    color: $maingrey;
+    padding: 3px;
+    font-weight: bold;
     border-radius: 0.25rem;
   }
   &__form-input::placeholder {

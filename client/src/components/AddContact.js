@@ -40,7 +40,7 @@ export default function AddContact(props) {
           placeholder="(123) 123-4567"
           className="addcontact__form-input"
         />
-        <label className="addcontact__form-label">Project ID</label>
+        <label className="addcontact__form-label">Project #</label>
         <input
           type="int"
           name="project_id"

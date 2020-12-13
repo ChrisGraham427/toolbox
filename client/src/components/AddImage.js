@@ -24,15 +24,20 @@ export default function AddImage(props) {
           placeholder="Add Image Title"
           className="addimage__form-input"
         />
-        <label className="addimage__form-label">File</label>
+        <label className="addimage__form-label"></label>
         <input
           type="file"
           name="image"
-          className="addimage__form-input"
+          className="addimage__form-input-file"
           onChange={props.changeImage}
         />
         <label className="addimage__form-label">Project #</label>
-        <input type="int" name="project_id" className="addimage__form-input" />
+        <input
+          type="int"
+          name="project_id"
+          className="addimage__form-input-id"
+          placeholder="Enter Project ID"
+        />
         <button className="addimage__form-button" type="submit">
           ADD IMAGE
         </button>

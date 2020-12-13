@@ -12,9 +12,6 @@ function Header(props) {
         />
       </Link>
       <div className="navbar__links">
-        <Link to="/project">
-          <button className="navbar__button">CREATE</button>
-        </Link>
         <form
           onSubmit={(event) => {
             props.handleProjectbyID(event, (id) => {
@@ -32,7 +29,9 @@ function Header(props) {
             PROJECT
           </button>
         </form>
-
+        <Link to="/project">
+          <button className="navbar__button">DASHBOARD</button>
+        </Link>
         <Link to="/update">
           <button className="navbar__button">UPDATE</button>
         </Link>
