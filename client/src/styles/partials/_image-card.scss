@@ -11,9 +11,9 @@
   margin: 0.5rem;
   box-shadow: 0 2px 4px $mainblack;
   &-button {
-    height: 1.5rem;
-    width: 1.5rem;
-
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.25rem;
     border: none;
     background: url("../assets/delete.png");
     background-repeat: no-repeat;
@@ -42,7 +42,7 @@
   }
   &-projecttitle {
     margin: 0;
-    font-size: 0.5rem;
+    font-size: 0.625rem;
   }
   &-projectid {
     margin: 0;
@@ -52,21 +52,23 @@
     box-sizing: content-box;
     background-color: $maingrey;
     width: 15rem;
-    font-size: 0.5rem;
+    font-size: 0.625rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     padding: 0.25rem 0;
     box-shadow: 0 2px 4px $mainblack;
+    border-top: 1px solid $mainyellow;
     border-radius: 0.25rem;
   }
   &-div-id {
-    background-color: $mainwhite;
+    background-color: $backgroundgrey;
     border-radius: 0.25rem;
     display: flex;
     padding: 3px;
-    color: $mainblack;
+    color: $mainwhite;
     font-weight: bolder;
+    box-shadow: 0 2px 4px $mainblack;
   }
 }

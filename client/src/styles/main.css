@@ -55,7 +55,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 4px solid #4c4c4c;
+  border-bottom: 6px solid #4c4c4c;
   -webkit-box-shadow: 0 3px 5px #4c4c4c;
           box-shadow: 0 3px 5px #4c4c4c;
 }
@@ -190,25 +190,29 @@ body {
   height: 1.75rem;
   border-radius: 0.25rem;
   width: 185px;
-  background-color: #4c4c4c;
+  background-color: #939597;
   color: #fafafa;
   margin-right: 1rem;
 }
 
 .navbar__input::-webkit-input-placeholder {
   color: #fafafa;
+  background-color: #939597;
 }
 
 .navbar__input:-ms-input-placeholder {
   color: #fafafa;
+  background-color: #939597;
 }
 
 .navbar__input::-ms-input-placeholder {
   color: #fafafa;
+  background-color: #939597;
 }
 
 .navbar__input::placeholder {
   color: #fafafa;
+  background-color: #939597;
 }
 
 .aside {
@@ -307,8 +311,8 @@ body {
 }
 
 .contact__card-button {
-  height: 1.25rem;
-  width: 1.25rem;
+  height: 1.75rem;
+  width: 1.75rem;
   border: none;
   background: url("../assets/delete.png");
   background-repeat: no-repeat;
@@ -320,15 +324,16 @@ body {
   font-size: 1rem;
   margin-bottom: 0;
   margin-top: 0.5rem;
+  padding: 0 0 0.25rem 0;
   background-color: #4c4c4c;
-  border-bottom: 5px solid #f5df4d;
+  border-bottom: 2px solid #f5df4d;
   width: 100%;
 }
 
 .contact__card-email {
   text-decoration: none;
   font-size: 0.75rem;
-  padding: 2px 0 0 0;
+  padding: 0;
   color: #fafafa;
   margin: 2px;
   border-radius: 0.25rem;
@@ -337,6 +342,11 @@ body {
 .contact__card-phone {
   font-size: 0.75rem;
   margin: 2px;
+  padding: 0 0.25rem;
+  background-color: #939597;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 2px 4px #323232;
+          box-shadow: 0 2px 4px #323232;
 }
 
 .contact__card-info {
@@ -362,7 +372,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #939597;
-  border-top: 8px solid #4c4c4c;
+  border-top: 6px solid #4c4c4c;
   -webkit-box-shadow: 0 6px 2px #4c4c4c;
           box-shadow: 0 6px 2px #4c4c4c;
   padding: 0 1.5rem;
@@ -512,7 +522,11 @@ body {
 }
 
 .project__card-address-title {
-  color: #323232;
+  background-color: #939597;
+  -webkit-box-shadow: 0 2px 4px #323232;
+          box-shadow: 0 2px 4px #323232;
+  border-radius: 0.25rem;
+  color: #fafafa;
   font-size: 0.75rem;
   margin: 0;
   padding-top: 2px;
@@ -607,7 +621,6 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding-left: 4rem;
 }
 
 .contact__main {
@@ -654,7 +667,6 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding-left: 4rem;
 }
 
 .addcontact {
@@ -671,7 +683,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   color: #fafafa;
-  height: 535px;
+  height: 82.5vh;
   background-color: #939597;
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 2px 4px #323232;
@@ -746,7 +758,6 @@ body {
   border-radius: 4px;
   padding-left: 1rem;
   margin-bottom: 1rem;
-  margin-right: 2rem;
   font-weight: bolder;
   font-size: 0.875rem;
   background-image: url("../assets/logo-black.png");
@@ -794,6 +805,7 @@ body {
           align-items: center;
   color: #fafafa;
   width: 400px;
+  height: 82.5vh;
   background-color: #939597;
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 2px 4px #323232;
@@ -808,6 +820,7 @@ body {
 }
 
 .addproject__form {
+  width: 75%;
   padding-top: 0.5rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -818,10 +831,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .addproject__form-input {
-  width: 300px;
+  width: 350px;
   background-color: #4c4c4c;
   color: #fafafa;
   border-radius: 0.25rem;
@@ -857,7 +873,7 @@ body {
 
 .addproject__form-input-description {
   height: 64px;
-  width: 300px;
+  width: 350px;
   background-color: #4c4c4c;
   text-overflow: auto;
   color: #fafafa;
@@ -894,7 +910,6 @@ body {
   border-radius: 4px;
   padding-left: 1rem;
   margin-bottom: 1rem;
-  margin-right: 2rem;
   font-weight: bolder;
   font-size: 0.875rem;
   background-image: url("../assets/logo-black.png");
@@ -954,13 +969,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   color: #fafafa;
-  height: 530px;
+  height: 82.5vh;
   background-color: #939597;
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 2px 4px #323232;
           box-shadow: 0 2px 4px #323232;
   width: 400px;
-  margin-right: 4rem;
 }
 
 .addimage__title {
@@ -972,7 +986,6 @@ body {
 
 .addimage__form {
   padding-top: 0.5rem;
-  margin-left: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1079,7 +1092,6 @@ body {
   border-radius: 4px;
   padding-left: 1rem;
   margin-bottom: 1rem;
-  margin-right: 2rem;
   margin-top: 1rem;
   font-weight: bolder;
   font-size: 0.875rem;
@@ -1146,7 +1158,6 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding-left: 4rem;
 }
 
 .image__card {
@@ -1172,8 +1183,9 @@ body {
 }
 
 .image__card-button {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 0.25rem;
   border: none;
   background: url("../assets/delete.png");
   background-repeat: no-repeat;
@@ -1209,7 +1221,7 @@ body {
 
 .image__card-projecttitle {
   margin: 0;
-  font-size: 0.5rem;
+  font-size: 0.625rem;
 }
 
 .image__card-projectid {
@@ -1222,7 +1234,7 @@ body {
           box-sizing: content-box;
   background-color: #4c4c4c;
   width: 15rem;
-  font-size: 0.5rem;
+  font-size: 0.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1238,23 +1250,26 @@ body {
   padding: 0.25rem 0;
   -webkit-box-shadow: 0 2px 4px #323232;
           box-shadow: 0 2px 4px #323232;
+  border-top: 1px solid #f5df4d;
   border-radius: 0.25rem;
 }
 
 .image__card-div-id {
-  background-color: #fafafa;
+  background-color: #939597;
   border-radius: 0.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 3px;
-  color: #323232;
+  color: #fafafa;
   font-weight: bolder;
+  -webkit-box-shadow: 0 2px 4px #323232;
+          box-shadow: 0 2px 4px #323232;
 }
 
 .hero__video {
   margin: 0;
-  height: 83vh;
+  height: 84.25vh;
 }
 
 .hero__video-section {
@@ -1476,14 +1491,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   color: #fafafa;
-  height: 535px;
+  height: 82.5vh;
   background-color: #939597;
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 2px 4px #323232;
@@ -1515,6 +1529,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 3rem;
   width: 350px;
 }
 
@@ -1559,7 +1574,6 @@ body {
   border-radius: 4px;
   padding-left: 1rem;
   margin-bottom: 1rem;
-  margin-right: 2rem;
   margin-top: 1rem;
   font-weight: bolder;
   font-size: 0.875rem;
@@ -1701,10 +1715,12 @@ body {
 
 .task__card-category {
   font-size: 0.875rem;
-  padding: 0.25rem;
+  padding: 0.25rem 2rem;
   background-color: #939597;
   color: #fafafa;
   border-radius: 0.25rem;
+  -webkit-box-shadow: 0 2px 4px #323232;
+          box-shadow: 0 2px 4px #323232;
 }
 
 .task__main {
@@ -1751,7 +1767,6 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding-left: 4rem;
 }
 
 .updateproject {
@@ -1999,7 +2014,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 86.35vh;
+  height: 82.5vh;
   border-right: 4px solid #4c4c4c;
 }
 
@@ -2173,7 +2188,7 @@ body {
 .imageById__container {
   width: 26%;
   height: 100%;
-  border-right: 12px solid #4c4c4c;
+  border-right: 6px solid #4c4c4c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2200,6 +2215,7 @@ body {
 }
 
 .imageById__container-title {
+  font-size: 1.25rem;
   color: #fafafa;
   margin-top: 0;
   text-align: center;
@@ -2262,7 +2278,7 @@ body {
           justify-content: flex-start;
   height: 100%;
   width: 25%;
-  border-right: 12px solid #4c4c4c;
+  border-right: 6px solid #4c4c4c;
 }
 
 .contactById__container-list {
@@ -2278,6 +2294,7 @@ body {
 }
 
 .contactById__container-title {
+  font-size: 1.25rem;
   color: #fafafa;
   margin-top: 0;
   text-align: center;
@@ -2312,7 +2329,7 @@ body {
 }
 
 .contact__cardid-name {
-  margin: 0;
+  margin: 0.75rem 0 0 0;
 }
 
 .contact__cardid-company {
@@ -2323,6 +2340,14 @@ body {
   margin: 0;
   color: #f5df4d;
   font-weight: bold;
+}
+
+.contact__cardid-phone {
+  margin: 0;
+}
+
+.contact__cardid-email {
+  margin: 0;
 }
 
 .taskById__container {
@@ -2341,7 +2366,7 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  border-right: 12px solid #4c4c4c;
+  border-right: 6px solid #4c4c4c;
 }
 
 .taskById__container-list {
@@ -2359,6 +2384,7 @@ body {
 
 .taskById__container-title {
   color: #fafafa;
+  font-size: 1.25rem;
   margin-top: 0;
   text-align: center;
   padding: 0.5rem 0;

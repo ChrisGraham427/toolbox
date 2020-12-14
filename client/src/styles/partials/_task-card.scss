@@ -54,9 +54,10 @@
   }
   &-category {
     font-size: 0.875rem;
-    padding: 0.25rem;
+    padding: 0.25rem 2rem;
     background-color: $backgroundgrey;
     color: $mainwhite;
     border-radius: 0.25rem;
+    box-shadow: 0 2px 4px $mainblack;
   }
 }

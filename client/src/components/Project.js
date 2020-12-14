@@ -36,7 +36,7 @@ export default function Project(props) {
       <div className="project__card-bottom">
         <div className="project__card-timeline">
           <p className="project__card-item">Start Date: {startDate}</p>
-          <p className="project__card-item">Est. End Date: {endDate}</p>
+          <p className="project__card-item">End Date: {endDate}</p>
         </div>
         <form
           onSubmit={(event) => {

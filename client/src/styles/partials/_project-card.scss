@@ -72,7 +72,10 @@
     margin: 0.5rem;
   }
   &-address-title {
-    color: $mainblack;
+    background-color: $backgroundgrey;
+    box-shadow: 0 2px 4px $mainblack;
+    border-radius: 0.25rem;
+    color: $mainwhite;
     font-size: 0.75rem;
     margin: 0;
     padding-top: 2px;

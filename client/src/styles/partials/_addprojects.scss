@@ -5,7 +5,7 @@
   align-items: center;
   color: $mainwhite;
   width: 400px;
-  // height: 535px;
+  height: 82.5vh;
   background-color: $backgroundgrey;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px $mainblack;
@@ -17,14 +17,16 @@
     font-size: 1.75rem;
   }
   &__form {
+    width: 75%;
     padding-top: 0.5rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   &__form-input {
-    width: 300px;
+    width: 350px;
     background-color: $maingrey;
     color: $mainwhite;
     border-radius: 0.25rem;
@@ -37,7 +39,7 @@
   }
   &__form-input-description {
     height: 64px;
-    width: 300px;
+    width: 350px;
     background-color: $maingrey;
     text-overflow: auto;
     color: $mainwhite;
@@ -56,7 +58,7 @@
     border-radius: 4px;
     padding-left: 1rem;
     margin-bottom: 1rem;
-    margin-right: 2rem;
+
     font-weight: bolder;
     font-size: 0.875rem;
     background-image: url("../assets/logo-black.png");

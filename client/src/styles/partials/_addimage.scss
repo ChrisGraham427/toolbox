@@ -4,12 +4,12 @@
   justify-content: space-around;
   align-items: center;
   color: $mainwhite;
-  height: 530px;
+  height: 82.5vh;
   background-color: $backgroundgrey;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px $mainblack;
   width: 400px;
-  margin-right: 4rem;
+
   &__title {
     text-align: center;
     margin: 0;
@@ -18,7 +18,7 @@
   }
   &__form {
     padding-top: 0.5rem;
-    margin-left: 0.5rem;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,7 +75,7 @@
     border-radius: 4px;
     padding-left: 1rem;
     margin-bottom: 1rem;
-    margin-right: 2rem;
+
     margin-top: 1rem;
     font-weight: bolder;
     font-size: 0.875rem;
