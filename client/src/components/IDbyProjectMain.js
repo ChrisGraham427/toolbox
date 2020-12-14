@@ -20,15 +20,13 @@ export default function IDbyProject(props) {
             contactData={props.contactData}
             currentContactId={props.currentContactId}
           />
-
-          <TaskById
-            taskData={props.taskData}
-            currentTaskId={props.currentTaskId}
-          />
-
           <ImageById
             imageData={props.imageData}
             currentImageId={props.currentImageId}
+          />
+          <TaskById
+            taskData={props.taskData}
+            currentTaskId={props.currentTaskId}
           />
         </div>
       </section>

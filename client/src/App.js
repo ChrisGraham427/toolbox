@@ -53,13 +53,17 @@ class App extends Component {
   }
   //=============SCHEDULER
 
-  onEventResize = (data) => {
-    const { start, end } = data;
+  onEventResize = (resizeType, { event, start, end }) => {
+    const { events } = this.state.events;
 
-    this.setState((state) => {
-      state.events[0].start = start;
-      state.events[0].end = end;
-      return { events: [...state.events] };
+    const nextEvents = events.map((existingEvent) => {
+      return existingEvent.id == event.id
+        ? { ...existingEvent, start, end }
+        : existingEvent;
+    });
+
+    this.setState({
+      events: nextEvents,
     });
   };
 
@@ -390,7 +394,7 @@ class App extends Component {
             render={() => (
               <MainSchedule
                 onEventResize={this.onEventResize}
-                onEventDrop={this.onEventDrop}
+                moveEvent={this.moveEvent}
                 data={this.state.events}
               />
             )}

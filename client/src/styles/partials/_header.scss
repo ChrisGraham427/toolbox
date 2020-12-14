@@ -1,13 +1,13 @@
 .navbar {
-  height: 10vh;
+  height: 100px;
   background-color: $backgroundgrey;
   display: flex;
   justify-content: space-between;
   border-bottom: 4px solid $maingrey;
   box-shadow: 0 3px 5px $maingrey;
   &__logo {
-    width: 240px;
-    height: 100%;
+    width: 265px;
+    margin-top: -0.75rem;
     margin-left: 3rem;
   }
   &__logo:hover {
@@ -31,6 +31,26 @@
     margin-right: 2rem;
     font-weight: bolder;
     font-size: 0.875rem;
+  }
+  &__button-search {
+    width: 120px;
+    height: 28px;
+    background-color: $maingrey;
+    box-shadow: 0 2px 4px $mainblack;
+    color: $mainyellow;
+    border: none;
+    border-radius: 4px;
+    padding-left: 1rem;
+    margin: 2px;
+    margin-right: 2rem;
+    font-weight: bolder;
+    font-size: 0.875rem;
+    background-image: url("../assets/search.png");
+    background-repeat: no-repeat;
+
+    background-position-x: 10%;
+    background-position-y: 50%;
+    background-size: 20px 20px;
   }
 
   &__button:hover {

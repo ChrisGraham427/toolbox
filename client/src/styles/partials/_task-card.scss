@@ -8,7 +8,7 @@
     text-align: center;
     justify-content: space-around;
     border-radius: 0.5rem;
-    background-color: $backgroundgrey;
+    background-color: $maingrey;
     color: $maingrey;
     width: 15rem;
     height: 17.5rem;
@@ -49,11 +49,13 @@
     border-radius: 0.25rem;
     height: rem;
     font-size: 0.875rem;
+    margin: 0.25rem 0 0 0;
+    overflow: hidden;
   }
   &-category {
     font-size: 0.875rem;
     padding: 0.25rem;
-    background-color: $maingrey;
+    background-color: $backgroundgrey;
     color: $mainwhite;
     border-radius: 0.25rem;
   }

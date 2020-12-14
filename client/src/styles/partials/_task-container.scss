@@ -1,10 +1,11 @@
 .task__container {
   &-list {
     height: 570px;
+    width: 820px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    overflow-y: scroll;
+    overflow-y: auto;
     align-items: center;
     list-style-type: none;
   }

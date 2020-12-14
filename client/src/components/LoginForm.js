@@ -1,10 +1,13 @@
+import github from "../assets/github.png";
 const API_URL = "http://localhost:8080";
+
 export default function LoginForm(props) {
   console.log(props);
 
   return (
     <section className="addlogin">
-      <div>
+      <img src={github} alt="github" />
+      <div className="addlogin__main">
         <h1>Log In</h1>
         {!Object.keys(props.data).length ? (
           <>

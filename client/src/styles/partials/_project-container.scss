@@ -2,7 +2,7 @@
   &-list {
     width: 90%;
     height: 560px;
-    overflow-y: scroll;
+    overflow-y: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

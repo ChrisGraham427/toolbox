@@ -1,11 +1,13 @@
 .contact__container {
   &-list {
-    height: 170px;
+    width: 880px;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    overflow-y: scroll;
-    align-items: center;
+    overflow-y: auto;
+    // align-items: flex-start;
+    // justify-content: flex-start;
     list-style-type: none;
   }
 }

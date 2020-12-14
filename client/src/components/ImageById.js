@@ -5,6 +5,7 @@ export default function ImageById(props) {
   console.log("contactList", imageList);
   return (
     <section className="imageById__container">
+      <h2 className="imageById__container-title">IMAGE GALLERY</h2>
       <ul className="imageById__container-list">
         {imageList.length &&
           props.currentImageId &&

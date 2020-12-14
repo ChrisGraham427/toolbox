@@ -39,14 +39,25 @@
   }
 
   &__form-button {
-    width: 120px;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    border: none;
+    width: 150px;
+    height: 28px;
     background-color: $mainyellow;
-    color: $mainblack;
-    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 4px $mainblack;
+    color: $maingrey;
+    border: none;
+    border-radius: 4px;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
     font-weight: bolder;
+    font-size: 0.875rem;
+    background-image: url("../assets/logo-black.png");
+    background-repeat: no-repeat;
+
+    background-position-x: 3%;
+    background-position-y: 50%;
+    background-size: 30px 30px;
   }
   &__form-button:hover {
     color: $mainyellow;

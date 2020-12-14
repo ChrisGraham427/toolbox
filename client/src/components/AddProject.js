@@ -63,7 +63,7 @@ export default function AddProject(props) {
         <label className="addproject__form-label">End Date</label>
 
         <input type="date" name="endDate" className="addproject__form-input" />
-        {/* <div className="addproject__form-radio">
+        <div className="addproject__form-radio">
           <label for="contactChoice1">Active</label>
           <input
             type="radio"
@@ -89,7 +89,7 @@ export default function AddProject(props) {
           <option value="subContract">SUBCONTRACT</option>
           <option value="newConstruction">NEW CONSTRUCTION</option>
           <option value="quote">QUOTE</option>
-        </select> */}
+        </select>
         <div className="addproject__form-button-div">
           <button className="addproject__form-button" type="submit">
             ADD PROJECT

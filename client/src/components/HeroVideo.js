@@ -3,9 +3,7 @@ export default function HeroVideo() {
   return (
     <section className="hero__video-section">
       <div className="hero__video-column">
-        <h1 className="hero__video-title">
-          YOURS PROJECTS, SIMPLY SCOPED FOR YOU
-        </h1>
+        <h1 className="hero__video-title">PUT YOUR PROJECTS IN GEAR</h1>
         <p>project management for everyone</p>
       </div>
       <video
@@ -16,9 +14,7 @@ export default function HeroVideo() {
         className="hero__video"
       ></video>
       <div className="hero__video-column">
-        <h1 className="hero__video-title">
-          YOURS PROJECTS, SIMPLY SCOPED FOR YOU
-        </h1>
+        <h1 className="hero__video-title">YOURS PROJECTS, PUT IN GEAR</h1>
         <p>project management for everyone</p>
       </div>
     </section>

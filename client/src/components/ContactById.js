@@ -3,6 +3,7 @@ export default function ContactById(props) {
   console.log("contactList", contactList);
   return (
     <section className="contactById__container">
+      <h2 className="contactById__container-title">CONTACTS</h2>
       <ul className="contactById__container-list">
         {contactList.length &&
           props.currentContactId &&
@@ -13,18 +14,19 @@ export default function ContactById(props) {
             .map((contact) => {
               console.log(contact);
               return (
-                <li className="contact_cardid" key={contact.project_id}>
+                <li className="contact__cardid" key={contact.project_id}>
                   <div>
-                    <h2>{contact.name}</h2>
-                    <div></div>
+                    <h2 className="contact__cardid-name">{contact.name}</h2>
                   </div>
-                  <p>{contact.company}</p>
+                  <p className="contact__cardid-company">{contact.company}</p>
                   <div>
-                    <p> {contact.position}</p>
-                    <p> {contact.phone}</p>
-                    <p> {contact.email}</p>
+                    <p className="contact__cardid-position">
+                      {" "}
+                      {contact.position}
+                    </p>
+                    <p className="contact__cardid-phone"> {contact.phone}</p>
+                    <p className="contact__cardid-email"> {contact.email}</p>
                   </div>
-                  <div>{contact.id}</div>
                 </li>
               );
             })}

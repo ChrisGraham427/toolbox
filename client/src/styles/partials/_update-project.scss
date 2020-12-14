@@ -123,6 +123,7 @@
   &__form-radio {
     font-size: 0.75rem;
     padding: 0.5rem;
+    color: $mainwhite;
   }
   &__form-radio:active {
     color: $mainyellow;
@@ -135,8 +136,8 @@
     color: $mainwhite;
   }
   &__select-div {
-    border-bottom: 6px solid $mainyellow;
-    border-top: 6px solid $mainyellow;
+    border-bottom: 4px solid $mainyellow;
+    border-top: 4px solid $mainyellow;
     padding: 0.5rem 0;
     width: 100%;
     display: flex;

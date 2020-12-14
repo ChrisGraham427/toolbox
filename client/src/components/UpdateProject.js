@@ -160,33 +160,33 @@ class UpdateProject extends Component {
                   className="updateproject__form-input"
                   value={this.state.endDate}
                 />
-                {/* <div className="updateproject__form-radio">
-          <label for="contactChoice1">Active</label>
-          <input
-            type="radio"
-            id="contactChoice1"
-            name="contact"
-            value="active"
-          />
+                <div className="updateproject__form-radio">
+                  <label for="contactChoice1">Active</label>
+                  <input
+                    type="radio"
+                    id="contactChoice1"
+                    name="contact"
+                    value="active"
+                  />
 
-          <label for="contactChoice3">On Hold</label>
-          <input
-            type="radio"
-            id="contactChoice3"
-            name="contact"
-            value="onHold"
-          />
-        </div>
+                  <label for="contactChoice3">On Hold</label>
+                  <input
+                    type="radio"
+                    id="contactChoice3"
+                    name="contact"
+                    value="onHold"
+                  />
+                </div>
 
-        <select className="updateproject__form-select" name="type">
-          <option value="">-PROJECT TYPE--</option>
-          <option value="renovation">RENOVATION</option>
-          <option value="remodel">REMODEL</option>
-          <option value="designOnly">DESIGN ONLY</option>
-          <option value="subContract">SUBCONTRACT</option>
-          <option value="newConstruction">NEW CONSTRUCTION</option>
-          <option value="quote">QUOTE</option>
-        </select> */}
+                <select className="updateproject__form-select" name="type">
+                  <option value="">-PROJECT TYPE--</option>
+                  <option value="renovation">RENOVATION</option>
+                  <option value="remodel">REMODEL</option>
+                  <option value="designOnly">DESIGN ONLY</option>
+                  <option value="subContract">SUBCONTRACT</option>
+                  <option value="newConstruction">NEW CONSTRUCTION</option>
+                  <option value="quote">QUOTE</option>
+                </select>
               </div>
             </div>
             <div className="updateproject__form-button-div">

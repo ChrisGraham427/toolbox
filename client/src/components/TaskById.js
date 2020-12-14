@@ -5,6 +5,7 @@ export default function TaskById(props) {
   console.log("taskList", props.currentTaskId);
   return (
     <section className="taskById__container">
+      <h2 className="taskById__container-title">TASKS TO COMPLETE</h2>
       <ul className="taskById__container-list">
         {taskList.length &&
           props.currentTaskId &&
@@ -15,7 +16,7 @@ export default function TaskById(props) {
             .map((task) => {
               console.log(task);
               return (
-                <li key={task.project_id}>
+                <li className="task__cardid" key={task.project_id}>
                   <div>
                     <h2>{task.task}</h2>
                     <div></div>
@@ -24,7 +25,6 @@ export default function TaskById(props) {
                   <div>
                     <p> {task.category}</p>
                   </div>
-                  <div>{task.id}</div>
                 </li>
               );
             })}

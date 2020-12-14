@@ -25,7 +25,7 @@ function Header(props) {
             name="projectId"
             placeholder="ENTER AN ID, HIT PROJECT TO SEARCH"
           />
-          <button type="submit" className="navbar__button">
+          <button type="submit" className="navbar__button-search">
             PROJECT
           </button>
         </form>

@@ -15,7 +15,7 @@ export default function Scheduler(props) {
         defaultView="month"
         events={props.data}
         localizer={localizer}
-        onEventDrop={props.onEventDrop}
+        moveEvent={props.moveEvent}
         onEventResize={props.onEventResize}
         resizable
         style={{ height: "83.25vh" }}

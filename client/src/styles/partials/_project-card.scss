@@ -2,17 +2,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   text-decoration-color: $maingrey;
   border-radius: 0.5rem;
-  background-color: $backgroundgrey;
+  background-color: $maingrey;
   color: $mainwhite;
   width: 15rem;
-  height: 17.5rem;
+  height: 15rem;
   box-shadow: 0 2px 4px $mainblack;
   margin-top: 1rem;
   margin-right: 1rem;
   &-item {
-    margin: 0.5rem 0;
+    margin: 0.125rem 0;
   }
   &-name {
     font-size: 1rem;
@@ -38,11 +39,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    margin-bottom: 0.25rem;
+    margin: 0 0.75rem 0.25rem 0;
   }
   &-button:hover {
     color: $mainyellow;
-    background-color: $maingrey;
+    background-color: $backgroundgrey;
     transform: scale(1.125);
   }
   &-title {
@@ -53,7 +54,7 @@
     box-shadow: 0 2px 4px $mainblack;
     background-color: $mainyellow;
     color: $maingrey;
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0 0.5rem 0;
   }
   &-address-container {
     text-align: center;
@@ -67,26 +68,26 @@
     font-size: 0.75rem;
   }
   &-item-address-yellow {
-    color: $mainyellow;
-    margin: 0;
+    color: $mainwhite;
+    margin: 0.5rem;
   }
   &-address-title {
-    color: $mainwhite;
+    color: $mainblack;
     font-size: 0.75rem;
     margin: 0;
     padding-top: 2px;
     padding-bottom: 2px;
-    border-bottom: 1px solid $backgroundgrey;
   }
   &-timeline {
-    margin-top: 0.75rem;
-    margin-bottom: 0.25rem;
+    width: 100%;
     font-size: 0.75rem;
     border: none;
-    box-shadow: 0 2px 4px $mainblack;
-    background-color: $maingrey;
+
     border-radius: 4px;
-    padding: 3px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   &-id {
     margin: 0.25rem 0 0 0;
@@ -95,5 +96,14 @@
   &-id-div {
     display: flex;
     padding-bottom: 0.25rem;
+  }
+  &-bottom {
+    width: 100%;
+    background-color: $maingrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0;
   }
 }
