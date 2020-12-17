@@ -27,6 +27,8 @@ export default function IDbyProject(props) {
           <TaskById
             taskData={props.taskData}
             currentTaskId={props.currentTaskId}
+            submitDelete={props.submitDelete}
+            handleSubmit={props.handleSubmitTask}
           />
         </div>
       </section>

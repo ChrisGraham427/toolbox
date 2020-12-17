@@ -30,7 +30,7 @@ function Header(props) {
           </button>
         </form>
         <Link to="/project">
-          <button className="navbar__button">DASHBOARD</button>
+          <button className="navbar__button">CREATE</button>
         </Link>
         <Link to="/update">
           <button className="navbar__button">UPDATE</button>
@@ -42,9 +42,9 @@ function Header(props) {
         <Link to="/login">
           <button className="navbar__button-github">LOGIN</button>
         </Link>
-        <Link to="/auth/google">
+        {/* <Link to="/auth/google">
           <button className="navbar__button-google">LOGIN</button>
-        </Link>
+        </Link> */}
       </div>
     </header>
   );

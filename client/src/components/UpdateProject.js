@@ -187,13 +187,18 @@ class UpdateProject extends Component {
                   <option value="newConstruction">NEW CONSTRUCTION</option>
                   <option value="quote">QUOTE</option>
                 </select>
+                <div className="updateproject__form-button-div">
+                  <button className="updateproject__form-button" type="submit">
+                    UPDATE
+                  </button>
+                </div>
               </div>
             </div>
-            <div className="updateproject__form-button-div">
+            {/* <div className="updateproject__form-button-div">
               <button className="updateproject__form-button" type="submit">
                 UPDATE
               </button>
-            </div>
+            </div> */}
           </form>
         </div>
       </section>

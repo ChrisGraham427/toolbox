@@ -261,6 +261,7 @@ class App extends Component {
   //=======POST IMAGE-----------
 
   onChangeImage = (event) => {
+    console.log(event.target.files[0]);
     this.setState({ selectedFile: event.target.files[0] });
   };
   handleSubmitImage = (event) => {
@@ -423,6 +424,8 @@ class App extends Component {
                 currentImageId={this.state.currentImage}
                 currentProjectId={this.state.currentProject}
                 currentContactId={this.state.currentContact}
+                submitDelete={this.handleDeleteSubmitTasks}
+                handleSubmit={this.handleSubmitTask}
               />
             )}
             exact

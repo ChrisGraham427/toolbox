@@ -18,13 +18,23 @@ export default function TaskById(props) {
               return (
                 <li className="task__cardid" key={task.project_id}>
                   <div>
-                    <h2>{task.task}</h2>
+                    <h2 className="task__cardid-title">{task.task}</h2>
                     <div></div>
                   </div>
-                  <p>{task.description}</p>
+                  <p className="task__cardid-description">{task.description}</p>
                   <div>
-                    <p> {task.category}</p>
+                    <p className="task__cardid-description"> {task.category}</p>
                   </div>
+                  <form
+                    onSubmit={(event) => {
+                      props.submitDelete(event, task.id);
+                    }}
+                  >
+                    <button
+                      type="submit"
+                      className="task__cardid-button"
+                    ></button>
+                  </form>
                 </li>
               );
             })}

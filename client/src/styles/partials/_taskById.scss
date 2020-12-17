@@ -43,4 +43,30 @@
   height: 15rem;
   margin: 0.5rem;
   box-shadow: 0 2px 4px $mainblack;
+  &-button {
+    width: 45px;
+    height: 45px;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: $mainyellow;
+    color: $mainblack;
+    font-weight: bolder;
+    background: url("../assets/checked-black.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  &-button:hover {
+    color: $mainyellow;
+
+    transform: scale(1.125);
+  }
+  &-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+  &-description {
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
 }

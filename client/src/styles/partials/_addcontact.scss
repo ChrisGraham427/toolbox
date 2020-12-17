@@ -4,7 +4,7 @@
   justify-content: space-around;
   align-items: center;
   color: $mainwhite;
-  height: 82.5vh;
+  height: 84.25vh;
   background-color: $backgroundgrey;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px $mainblack;
@@ -19,7 +19,6 @@
     text-align: left;
   }
   &__form {
-    padding-top: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -27,6 +26,7 @@
     width: 350px;
   }
   &__form-input {
+    margin-bottom: 1.5rem;
     background-color: $maingrey;
     color: $mainwhite;
     border-radius: 0.25rem;
@@ -47,12 +47,10 @@
     border-radius: 4px;
     padding-left: 1rem;
     margin-bottom: 1rem;
-
     font-weight: bolder;
     font-size: 0.875rem;
     background-image: url("../assets/logo-black.png");
     background-repeat: no-repeat;
-
     background-position-x: 3%;
     background-position-y: 50%;
     background-size: 30px 30px;

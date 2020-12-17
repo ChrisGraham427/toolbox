@@ -4,20 +4,36 @@
   justify-content: space-evenly;
   align-items: center;
   color: $mainwhite;
-  height: 82.5vh;
-  background-color: $backgroundgrey;
+  height: 84.25vh;
+  background: url("../assets/login-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px $mainyellow;
+  &__container {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $maingrey;
+    border-radius: 0.5rem;
+  }
+  &__image-github {
+    width: 100px;
+  }
   &__title {
     text-align: center;
     margin: 0;
     padding-top: 0.5rem;
   }
   &__form {
-    width: 45vw;
+    width: 100%;
     padding-top: 1.5rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   &__form-input {
     margin: 0.75rem 0;
@@ -44,5 +60,84 @@
     margin-top: 1rem;
     display: flex;
     justify-content: space-evenly;
+  }
+  &__a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: $mainwhite;
+    width: 75px;
+    height: 28px;
+    background-color: $mainyellow;
+    box-shadow: 0 2px 4px $mainblack;
+    color: $maingrey;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bolder;
+  }
+}
+
+.adduser {
+  display: flex;
+  flex-direction: column;
+
+  &__form {
+    border-radius: 0.5rem;
+    background-color: $backgroundgrey;
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    box-shadow: 0 4px 6px $mainblack;
+    text-align: center;
+  }
+  &__form-label {
+    width: 200px;
+  }
+  &__form-input {
+    width: 200px;
+    background-color: $maingrey;
+    color: $mainwhite;
+  }
+  &__form-button {
+    width: 175px;
+    height: 28px;
+    background-color: $mainyellow;
+    box-shadow: 0 2px 4px $mainblack;
+    color: $maingrey;
+    border: none;
+    border-radius: 4px;
+    padding-left: 1rem;
+    margin: 2px;
+
+    font-weight: bolder;
+    font-size: 0.875rem;
+    background-image: url("../assets/logo-black.png");
+    background-repeat: no-repeat;
+    background-position-x: 2.5%;
+    background-position-y: 50%;
+    background-size: 30px 30px;
+  }
+  &__form-button-login {
+    width: 175px;
+    height: 28px;
+    background-color: $mainyellow;
+    box-shadow: 0 2px 4px $mainblack;
+    color: $maingrey;
+    border: none;
+    border-radius: 4px;
+    padding-left: 1rem;
+    margin: 2px;
+
+    font-weight: bolder;
+    font-size: 0.875rem;
+    background-image: url("../assets/logo-black.png");
+    background-repeat: no-repeat;
+    background-position-x: 25%;
+    background-position-y: 50%;
+    background-size: 30px 30px;
   }
 }

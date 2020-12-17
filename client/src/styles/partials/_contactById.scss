@@ -40,20 +40,20 @@
   height: 8rem;
   box-shadow: 0 2px 4px $mainblack;
   &-name {
-    margin: 0.75rem 0 0 0;
+    margin: 0.875rem 0 0 0;
   }
   &-company {
-    margin: 0;
+    margin: 1px;
   }
   &-position {
-    margin: 0;
+    margin: 1px;
     color: $mainyellow;
     font-weight: bold;
   }
   &-phone {
-    margin: 0;
+    margin: 1px;
   }
   &-email {
-    margin: 0;
+    margin: 1px;
   }
 }

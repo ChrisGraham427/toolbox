@@ -5,16 +5,17 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  height: 84.25vh;
   &__div {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     color: $maingrey;
-    height: 82.5vh;
+    height: 100%;
     width: 70vw;
     background-color: $maingrey;
-
+    border: 4px solid $backgroundgrey;
     box-shadow: 0 2px 4px $mainblack;
   }
   &__title {
@@ -31,15 +32,13 @@
     margin: 0 1rem 0 0;
   }
   &__form {
-    width: 85%;
-    padding-top: 0.5rem;
-    margin-left: 7.5%;
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
   &__form-input {
     width: 100%;
-    background-color: $backgroundgrey;
+    background-color: $maingrey;
     color: $mainwhite;
     border-radius: 0.25rem;
     box-shadow: 0 1px 2px $mainblack;
@@ -47,19 +46,19 @@
   }
   &__form-input::placeholder {
     color: $mainwhite;
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
   &__form-input-description {
-    height: 90%;
+    height: 50%;
     width: 80%;
     margin-left: 10%;
 
     background-color: $backgroundgrey;
     text-overflow: auto;
     color: $mainwhite;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     box-shadow: 0 1px 2px $mainblack;
     font-size: 1.125rem;
   }
@@ -101,8 +100,6 @@
     padding: 0.5rem 0 0.25rem 0;
   }
   &__form-div {
-    width: 90%;
-
     display: flex;
   }
 
@@ -112,10 +109,14 @@
     display: flex;
     flex-direction: column;
     margin-right: 1rem;
+    padding: 1rem;
   }
 
   &__form-div-right {
-    width: 20%;
+    background-color: $backgroundgrey;
+    width: 35%;
+    height: 100%;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
   }
