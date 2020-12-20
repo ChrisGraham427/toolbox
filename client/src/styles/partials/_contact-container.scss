@@ -1,11 +1,12 @@
 .contact__container {
   &-list {
     width: 880px;
-
+    width: 805px;
+    margin-top: 180px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    overflow-y: auto;
+    overflow: auto;
     // align-items: flex-start;
     // justify-content: flex-start;
     list-style-type: none;

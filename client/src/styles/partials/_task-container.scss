@@ -1,12 +1,14 @@
 .task__container {
   &-list {
-    height: 570px;
+    height: 600px;
     width: 820px;
+    margin-top: 160px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    overflow-y: auto;
+    overflow-y: scroll;
     align-items: center;
+    justify-content: center;
     list-style-type: none;
   }
 }

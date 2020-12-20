@@ -37,8 +37,9 @@
     flex-direction: column;
   }
   &__form-input {
-    width: 100%;
+    width: 70%;
     background-color: $maingrey;
+    margin-left: 15%;
     color: $mainwhite;
     border-radius: 0.25rem;
     box-shadow: 0 1px 2px $mainblack;
@@ -74,7 +75,6 @@
     font-size: 1rem;
   }
   &__form-button {
-    margin-right: 10%;
     padding: 0.5rem 1.5rem;
     border-radius: 0.25rem;
     border: none;
@@ -114,6 +114,7 @@
 
   &__form-div-right {
     background-color: $backgroundgrey;
+    border-radius: 0.5rem;
     width: 35%;
     height: 100%;
     padding: 1rem;
@@ -124,6 +125,9 @@
   &__form-radio {
     font-size: 0.75rem;
     padding: 0.5rem;
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
     color: $mainwhite;
   }
   &__form-radio:active {

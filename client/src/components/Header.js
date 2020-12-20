@@ -30,7 +30,7 @@ function Header(props) {
           </button>
         </form>
         <Link to="/project">
-          <button className="navbar__button">CREATE</button>
+          <button className="navbar__button">MANAGE</button>
         </Link>
         <Link to="/update">
           <button className="navbar__button">UPDATE</button>
