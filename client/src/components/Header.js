@@ -39,9 +39,9 @@ function Header(props) {
         <Link to="/schedule">
           <button className="navbar__button">CALENDAR</button>
         </Link>
-        <Link to="/login">
+        {/* <Link to="/">
           <button className="navbar__button-github">LOGIN</button>
-        </Link>
+        </Link> */}
         {/* <Link to="/auth/google">
           <button className="navbar__button-google">LOGIN</button>
         </Link> */}

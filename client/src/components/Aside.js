@@ -11,6 +11,7 @@ export default class Aside extends React.Component {
             <img
               src={process.env.PUBLIC_URL + "/clipboard.svg"}
               className="aside__logo"
+              alt="logo"
             />
           </div>
         </Link>
@@ -20,6 +21,7 @@ export default class Aside extends React.Component {
             <img
               src={process.env.PUBLIC_URL + "/user.svg"}
               className="aside__logo"
+              alt="logo"
             />
           </div>
         </Link>
@@ -29,6 +31,7 @@ export default class Aside extends React.Component {
             <img
               src={process.env.PUBLIC_URL + "/picture.svg"}
               className="aside__logo"
+              alt="logo"
             />
           </div>
         </Link>
@@ -38,6 +41,7 @@ export default class Aside extends React.Component {
             <img
               src={process.env.PUBLIC_URL + "/picture.svg"}
               className="aside__logo"
+              alt="logo"
             />
           </div>
         </Link>

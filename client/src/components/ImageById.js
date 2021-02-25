@@ -1,5 +1,3 @@
-import ContactCardById from "./ContactCardById";
-
 export default function ImageById(props) {
   const imageList = props.imageData;
   console.log("contactList", imageList);

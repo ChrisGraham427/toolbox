@@ -1,5 +1,3 @@
-const API_URL = "http://localhost:8080";
-
 export default function AddTask(props) {
   return (
     <section className="addtask">

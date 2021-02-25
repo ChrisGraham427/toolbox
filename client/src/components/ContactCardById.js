@@ -3,7 +3,7 @@ export default function ContactCardById(props) {
   const {
     phone,
     email,
-    name,
+
     company,
     position,
     project_id,

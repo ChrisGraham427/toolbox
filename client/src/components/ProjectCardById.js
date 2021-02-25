@@ -8,8 +8,7 @@ export default function ProjectCardById(props) {
     city,
     province,
     postalCode,
-    contact,
-    images,
+
     startDate,
     endDate,
   } = props.data;

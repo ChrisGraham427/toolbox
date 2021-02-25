@@ -31,7 +31,13 @@ function LoginForm(props) {
   return (
     <section className="addlogin">
       <div className="addlogin__container">
-        <div className="addlogin__form">
+        <Link to="/">
+          <img
+            src={process.env.PUBLIC_URL + "/Atrezi-logo.png"}
+            className="login__logo"
+          />
+        </Link>
+        {/* <div className="addlogin__form">
           <img src={github} alt="github" className="addlogin__image-github" />
 
           <h1 className="addlogin-title">Log In With GitHub</h1>
@@ -52,16 +58,21 @@ function LoginForm(props) {
               <button onClick={props.handleLogout}>logout</button>
             </>
           )}
-        </div>
+        </div> */}
         <section className="adduser">
           <form onSubmit={newUser} className="adduser__form">
-            <h2 className="adduser__form-title">Account Sign-Up</h2>
+            <h2 className="adduser__form-title">Account Sign-In</h2>
             <div className="adduser__form-label">
-              Email:{" "}
-              <input type="text" name="email" className="adduser__form-input" />
+              EMAIL{" "}
+              <input
+                type="text"
+                name="email"
+                className="adduser__form-input"
+                value="chris@atrezi.io"
+              />
             </div>
             <div className="adduser__form-label">
-              Password:{" "}
+              PASSWORD{" "}
               <input
                 type="password"
                 name="password"
@@ -69,14 +80,14 @@ function LoginForm(props) {
               />
             </div>
             <div className="adduser__form-label">
-              Confirm Password:{" "}
+              CONFIRM PASSWORD{" "}
               <input
                 type="password"
                 name="confirmPassword"
                 className="adduser__form-input"
               />
             </div>
-            <Link to="/">
+            <Link to="/project">
               <button className="adduser__form-button-login">LOGIN</button>
             </Link>
             <button className="adduser__form-button">CREATE ACCOUNT</button>

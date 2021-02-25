@@ -7,14 +7,17 @@ function Footer() {
         <img
           src={process.env.PUBLIC_URL + "/facebook.svg"}
           className="bottomnav__logo"
+          alt="logo"
         />
         <img
           src={process.env.PUBLIC_URL + "/twitter.svg"}
           className="bottomnav__logo"
+          alt="logo"
         />
         <img
           src={process.env.PUBLIC_URL + "/linkedin.svg"}
           className="bottomnav__logo"
+          alt="logo"
         />
       </div>
       <p className="bottomnav__produced">
@@ -24,6 +27,7 @@ function Footer() {
         <img
           src={process.env.PUBLIC_URL + "/Atrezi-logo.png"}
           className="bottomnav__title"
+          alt="logo"
         />
       </Link>
     </footer>

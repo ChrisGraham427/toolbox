@@ -1,5 +1,3 @@
-import Header from "./Header";
-import Footer from "./Footer";
 import Aside from "./Aside";
 import ContactList from "./ContactList";
 import AddContact from "./AddContact";

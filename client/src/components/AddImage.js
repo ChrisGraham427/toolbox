@@ -1,5 +1,3 @@
-const API_URL = "http://localhost:8080";
-
 export default function AddImage(props) {
   return (
     <section className="addimage">

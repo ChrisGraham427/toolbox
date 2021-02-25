@@ -1,5 +1,3 @@
-import Header from "./Header";
-import Footer from "./Footer";
 import Aside from "./Aside";
 import ImageList from "./ImageList";
 import AddImage from "./AddImage";

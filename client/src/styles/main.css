@@ -607,6 +607,7 @@ body {
 }
 
 .project__main-right-column {
+  height: 100%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -615,9 +616,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -1336,8 +1337,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   color: #fafafa;
-  height: 84.25vh;
-  background: url("../assets/login-background.jpg");
+  height: 100vh;
+  background: url("../assets/cranes.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 0.5rem;
@@ -1347,7 +1348,7 @@ body {
 
 .addlogin__container {
   height: 100%;
-  width: 40%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1358,14 +1359,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  background-color: #4c4c4c;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
+  background: url("../assets/fancy-deboss.png");
 }
 
 .addlogin__image-github {
-  width: 100px;
+  width: 50px;
 }
 
 .addlogin__title {
@@ -1392,7 +1391,7 @@ body {
 .addlogin__form-input {
   margin: 0.75rem 0;
   width: 85%;
-  background-color: #4c4c4c;
+  background-color: #939597;
 }
 
 .addlogin__form-input::-webkit-input-placeholder {
@@ -1468,9 +1467,8 @@ body {
 
 .adduser__form {
   border-radius: 0.5rem;
-  background-color: #939597;
-  width: 500px;
-  height: 400px;
+  width: 380px;
+  height: 380px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1485,19 +1483,30 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-shadow: 0 4px 6px #323232;
-          box-shadow: 0 4px 6px #323232;
+  -webkit-box-shadow: 0 4px 6px #4c4c4c;
+          box-shadow: 0 4px 6px #4c4c4c;
   text-align: center;
 }
 
 .adduser__form-label {
+  font-size: 0.75rem;
+  font-weight: bold;
   width: 200px;
+  color: #4c4c4c;
+}
+
+.adduser__form-title {
+  color: #4c4c4c;
 }
 
 .adduser__form-input {
+  font-weight: bold;
   width: 200px;
   background-color: #4c4c4c;
+  border-radius: 0.5rem;
   color: #fafafa;
+  -webkit-box-shadow: 0 2px 2px #fafafa;
+          box-shadow: 0 2px 2px #fafafa;
 }
 
 .adduser__form-button {
@@ -1538,6 +1547,15 @@ body {
   background-position-x: 25%;
   background-position-y: 50%;
   background-size: 30px 30px;
+}
+
+.login__logo {
+  height: 340px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding-bottom: 0;
+  position: relative;
+  right: 320px;
 }
 
 .image__container {
@@ -2322,19 +2340,19 @@ body {
 }
 
 .rbc-event-content {
-  background-color: #939597;
-  color: #fafafa;
+  background-color: #4c4c4c;
+  color: #f5df4d;
   border: none;
   padding: 0;
   margin: 0;
 }
 
 .rbc-day-bg {
-  background-color: #4c4c4c;
+  background-color: #939597;
 }
 
 .rbc-today {
-  background-color: #939597;
+  background-color: #4c4c4c;
 }
 
 .imageById__container {

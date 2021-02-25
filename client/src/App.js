@@ -1,22 +1,18 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import axios from "axios";
 import ProjectMain from "./components/ProjectMain";
 import ContactMain from "./components/ContactMain";
 import ImageMain from "./components/ImageMain";
 import TaskMain from "./components/TaskMain";
-import Hero from "./components/Hero";
+
 import LoginPage from "./components/LoginPage";
 import MainSchedule from "./components/MainSchedule";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import UpdateProject from "./components/UpdateProject";
-import moment, { relativeTimeThreshold } from "moment";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import moment from "moment";
+import { BrowserRouter as Switch, Route } from "react-router-dom";
 
 import IDbyProject from "./components/IDbyProjectMain";
 
@@ -38,10 +34,24 @@ class App extends Component {
       {
         start: moment().toDate(),
         end: moment().add(0, "days").toDate(),
-        title: "First Appointment",
+        title: "TODAY",
+      },
+      {
+        start: new Date(2021, 0, 1, 24, 0, 0),
+        end: new Date(2021, 0, 14, 24, 0, 0),
+        title: "Atrezi",
+      },
+
+      {
+        start: new Date(2021, 0, 14),
+        end: new Date(2021, 0, 16),
+        title: "Test",
       },
     ],
     userData: {},
+    //authenicate logged in//
+    isLoggedIn: false,
+    isLandingPage: false,
   };
 
   componentDidMount() {
@@ -51,6 +61,25 @@ class App extends Component {
     this.getImages();
     this.getTasks();
   }
+  componentDidUpdate(previousProps, previousState) {
+    this.urlChecker(previousState);
+  }
+  //--------LOGGED IN---//
+
+  urlChecker = (previousState) => {
+    console.log("PROPS.LOCATION", this.props.location.pathname);
+    if (
+      this.props.location.pathname === "/" &&
+      previousState.isLandingPage === false
+    ) {
+      this.setState({ isLandingPage: true });
+    } else if (
+      this.props.location.pathname !== "/" &&
+      previousState.isLandingPage === true
+    ) {
+      this.setState({ isLandingPage: false });
+    }
+  };
   //=============SCHEDULER
 
   onEventResize = (resizeType, { event, start, end }) => {
@@ -343,7 +372,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header handleProjectbyID={this.handleProjectbyID} />
+        {this.state.isLandingPage === true ? null : (
+          <Header handleProjectbyID={this.handleProjectbyID} />
+        )}
+
         <Switch>
           <Route
             path="/project"
@@ -379,9 +411,9 @@ class App extends Component {
             )}
             exact
           />
-          <Route path="/" component={Hero} exact />
+          {/* <Route path="/" component={Hero} exact /> */}
           <Route
-            path="/login"
+            path="/"
             render={() => (
               <LoginPage
                 data={this.state.userData}
@@ -440,10 +472,10 @@ class App extends Component {
             )}
           />
         </Switch>
-        <Footer />
+        {this.state.isLandingPage === true ? null : <Footer />}
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);

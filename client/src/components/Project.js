@@ -1,16 +1,14 @@
-import { Link } from "react-router-dom";
 export default function Project(props) {
   const {
     id,
     title,
-    description,
+
     streetNumber,
     streetName,
     city,
     province,
     postalCode,
-    contact,
-    images,
+
     startDate,
     endDate,
   } = props.data;
@@ -47,6 +45,6 @@ export default function Project(props) {
         </form>
       </div>
     </li>
-    // </Link>
+    /* </Link> */
   );
 }

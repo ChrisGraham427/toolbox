@@ -4,24 +4,27 @@
   justify-content: space-evenly;
   align-items: center;
   color: $mainwhite;
-  height: 84.25vh;
-  background: url("../assets/login-background.jpg");
+  height: 100vh;
+
+  background: url("../assets/cranes.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px $mainyellow;
   &__container {
     height: 100%;
-    width: 40%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    background-color: $maingrey;
-    border-radius: 0.5rem;
+    // justify-content: space-around;
+    // background-color: $maingrey;
+    border-radius: 0.75rem;
+
+    background: url("../assets/fancy-deboss.png");
   }
   &__image-github {
-    width: 100px;
+    width: 50px;
   }
   &__title {
     text-align: center;
@@ -38,7 +41,7 @@
   &__form-input {
     margin: 0.75rem 0;
     width: 85%;
-    background-color: $maingrey;
+    background-color: $backgroundgrey;
   }
   &__form-input::placeholder {
     color: $mainwhite;
@@ -83,24 +86,33 @@
 
   &__form {
     border-radius: 0.5rem;
-    background-color: $backgroundgrey;
-    width: 500px;
-    height: 400px;
+    // background-color: $maingrey;
+    width: 380px;
+    height: 380px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: space-evenly;
-    box-shadow: 0 4px 6px $mainblack;
+    box-shadow: 0 4px 6px $maingrey;
     text-align: center;
   }
   &__form-label {
+    font-size: 0.75rem;
+    font-weight: bold;
     width: 200px;
+    color: $maingrey;
+  }
+  &__form-title {
+    color: $maingrey;
   }
   &__form-input {
+    font-weight: bold;
     width: 200px;
     background-color: $maingrey;
+    border-radius: 0.5rem;
     color: $mainwhite;
+    box-shadow: 0 2px 2px $mainwhite;
   }
   &__form-button {
     width: 175px;
@@ -140,4 +152,12 @@
     background-position-y: 50%;
     background-size: 30px 30px;
   }
+}
+.login__logo {
+  height: 340px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding-bottom: 0;
+  position: relative;
+  right: 320px;
 }
