@@ -1,8 +1,28 @@
-
+{
+  "name": "toolbox",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "dependencies": {
+    "multer": "^1.4.2",
+    "sass": "^1.30.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "client": "npm start --prefix client",
     "start": "npm start --prefix server",
     "server": "nodemon index --prefix server",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm install --prefix server && npm run build --prefix client"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisGraham427/toolbox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisGraham427/toolbox/issues"
+  },
+  "homepage": "https://github.com/ChrisGraham427/toolbox#readme"
+}
