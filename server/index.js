@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const mysql = require("mysql");
+const knex = require("./knexfile");
 const projectRoutes = require("./routes/project");
 const contactRoutes = require("./routes/contact");
 const imageRoutes = require("./routes/image");
@@ -35,6 +37,33 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+let connection;
+// make connection
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection(knex.development);
+}
+
+if (process.env.NODE_ENV === "production") {
+  // Set static folder
+  app.use(express.static("../client/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../client", "build", "index.html"));
+  });
+}
+
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}.`);
+});
+
+connection.connect((err) => {
+  console.log("connected as id " + connection.threadId);
+});
+
+// Export connection for our ORM to use.
+module.exports = connection;
 //---------------
 
 passport.use(

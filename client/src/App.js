@@ -16,7 +16,10 @@ import { BrowserRouter as Switch, Route } from "react-router-dom";
 
 import IDbyProject from "./components/IDbyProjectMain";
 
-const API_URL = "http://localhost:8080";
+const API_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://git.heroku.com/rocky-falls-10157.git"
+    : "http://localhost:8080";
 
 class App extends Component {
   state = {
