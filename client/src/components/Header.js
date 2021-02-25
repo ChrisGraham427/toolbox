@@ -9,6 +9,7 @@ function Header(props) {
         <img
           src={process.env.PUBLIC_URL + "/Atrezi-logo.png"}
           className="navbar__logo"
+          alt="logo"
         />
       </Link>
       <div className="navbar__links">

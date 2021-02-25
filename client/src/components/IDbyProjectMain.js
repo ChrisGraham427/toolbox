@@ -1,6 +1,6 @@
 import ProjectById from "./ProjectById";
 import ContactById from "./ContactById";
-import TaskById from "./TaskById";
+// import TaskById from "./TaskById";
 import ImageById from "./ImageById";
 export default function IDbyProject(props) {
   console.log(props);
@@ -24,12 +24,12 @@ export default function IDbyProject(props) {
             imageData={props.imageData}
             currentImageId={props.currentImageId}
           />
-          <TaskById
+          {/* <TaskById
             taskData={props.taskData}
             currentTaskId={props.currentTaskId}
             submitDelete={props.submitDelete}
             handleSubmit={props.handleSubmitTask}
-          />
+          /> */}
         </div>
       </section>
     </section>

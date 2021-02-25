@@ -1,7 +1,6 @@
 import React from "react";
-import github from "../assets/github.png";
+
 import { Link } from "react-router-dom";
-const API_URL = "http://localhost:8080";
 
 function LoginForm(props) {
   const newUser = (event) => {
@@ -35,6 +34,7 @@ function LoginForm(props) {
           <img
             src={process.env.PUBLIC_URL + "/Atrezi-logo.png"}
             className="login__logo"
+            alt="logo"
           />
         </Link>
         {/* <div className="addlogin__form">
